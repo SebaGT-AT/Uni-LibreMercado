@@ -41,9 +41,9 @@ Sistema de comercio electronico distribuido desarrollado en PHP puro, PDO y MySQ
 - `sp_actualizar_stock()`: ajusta existencias de forma controlada.
 - `sp_reconstruir_stock()`: recompone el stock de una transaccion abortada.
 - `sp_set_node_status()`: permite marcar una sucursal como `ONLINE` u `OFFLINE`.
-- [nodos.php](C:/Users/sebag/Documents/Libre Mercado/nodos.php): panel para simular caida y recuperacion de nodos.
-- [api/checkout.php](C:/Users/sebag/Documents/Libre Mercado/api/checkout.php): compra distribuida con respuesta JSON.
-- [api/node_status.php](C:/Users/sebag/Documents/Libre Mercado/api/node_status.php): cambio de estado de nodos por AJAX.
+- `nodos.php`: panel para simular caida y recuperacion de nodos.
+- `api/checkout.php`: compra distribuida con respuesta JSON.
+- `api/node_status.php`: cambio de estado de nodos por AJAX.
 
 ## Logica de la arquitectura
 - Los datos globales viven en el nodo central.
@@ -63,9 +63,9 @@ Si ya habias levantado los contenedores antes de estos cambios y quieres regener
 docker compose down -v
 docker compose up -d --build
 ```
-2. Abrir:
+2. Abrir en el navegador:
 ```text
-http://localhost:8080/index.php
+http://localhost:8080/
 ```
 3. Puertos de base de datos:
 - Central: `3407`
@@ -77,9 +77,9 @@ http://localhost:8080/index.php
 XAMPP queda como modo de desarrollo local en una sola instancia MySQL. El proyecto mantiene la misma logica distribuida, pero las cuatro bases viven dentro del mismo servidor MySQL.
 
 1. Instalar XAMPP.
-2. Copiar esta carpeta a `C:\xampp\htdocs\Libre Mercado`.
+2. Copiar esta carpeta dentro de `htdocs` de XAMPP.
 3. Iniciar `Apache` y `MySQL`.
-4. Ejecutar el script [sql/libre_mercado_distribuido.sql](C:/Users/sebag/Documents/Libre Mercado/sql/libre_mercado_distribuido.sql).
+4. Ejecutar el script `sql/libre_mercado_distribuido.sql`.
 5. Configurar, si hace falta, las variables de entorno para que todos los hosts apunten a `127.0.0.1:3306`.
 
 ## Cliente de base de datos
@@ -99,12 +99,12 @@ Se eligio CP:
 - Se prioriza consistencia e integridad del inventario.
 - Si falla una sucursal, la venta de esa sucursal se bloquea.
 - El resto del sistema puede seguir consultando datos globales.
-- La demostracion de la particion simulada se realiza dejando una sucursal en `OFFLINE` desde [nodos.php](C:/Users/sebag/Documents/Libre Mercado/nodos.php).
+- La demostracion de la particion simulada se realiza dejando una sucursal en `OFFLINE` desde `nodos.php`.
 
 ## Archivos clave
-- [config/db_central.php](C:/Users/sebag/Documents/Libre Mercado/config/db_central.php)
-- [config/db_sucursales.php](C:/Users/sebag/Documents/Libre Mercado/config/db_sucursales.php)
-- [models/Venta.php](C:/Users/sebag/Documents/Libre Mercado/models/Venta.php)
-- [models/Compra.php](C:/Users/sebag/Documents/Libre Mercado/models/Compra.php)
-- [models/Carrito.php](C:/Users/sebag/Documents/Libre Mercado/models/Carrito.php)
-- [models/Stock.php](C:/Users/sebag/Documents/Libre Mercado/models/Stock.php)
+- `config/db_central.php`
+- `config/db_sucursales.php`
+- `models/Venta.php`
+- `models/Compra.php`
+- `models/Carrito.php`
+- `models/Stock.php`

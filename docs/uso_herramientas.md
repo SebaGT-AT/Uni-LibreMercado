@@ -7,23 +7,23 @@ El proyecto puede ejecutarse con XAMPP porque usa:
 - MySQL o MariaDB para las tres bases de datos del sistema.
 
 ### Pasos con XAMPP
-1. Copiar la carpeta `Libre Mercado` dentro de `C:\xampp\htdocs\`.
+1. Copiar la carpeta del proyecto dentro de `htdocs` de XAMPP.
 2. Iniciar `Apache` y `MySQL` desde el panel de XAMPP.
 3. Abrir `phpMyAdmin`.
-4. Ejecutar el script [sql/libre_mercado_distribuido.sql](C:/Users/sebag/Documents/Libre Mercado/sql/libre_mercado_distribuido.sql).
+4. Ejecutar el script `sql/libre_mercado_distribuido.sql`.
 5. Abrir en el navegador:
-   - `http://localhost/Libre%20Mercado/index.php`
+   - `http://localhost/<nombre-del-proyecto>/`
 
 ## 2. Docker
 El proyecto incluye:
-- [Dockerfile](C:/Users/sebag/Documents/Libre Mercado/Dockerfile)
-- [docker-compose.yml](C:/Users/sebag/Documents/Libre Mercado/docker-compose.yml)
+- `Dockerfile`
+- `docker-compose.yml`
 
 ### Pasos con Docker
 1. Ejecutar `docker compose up -d --build`
 2. Esperar a que MySQL inicialice las bases.
 3. Abrir:
-   - `http://localhost:8080/index.php`
+   - `http://localhost:8080/`
 
 ### Justificacion academica
 Docker permite demostrar portabilidad, reproduccion del entorno y despliegue controlado del sistema distribuido.
@@ -51,10 +51,11 @@ Se recomienda usar uno de estos clientes:
 - phpMyAdmin
 
 ### Que revisar en el cliente DB
-- Existencia de las 3 bases:
-  - `libre_mercado_productos`
-  - `libre_mercado_clientes`
-  - `libre_mercado_ventas`
+- Existencia de las 4 bases actuales:
+  - `libre_mercado_central`
+  - `libre_mercado_norte`
+  - `libre_mercado_centro`
+  - `libre_mercado_sur`
 - Tablas por nodo
 - Datos de prueba
 - Tabla `distributed_transactions`

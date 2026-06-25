@@ -1,13 +1,28 @@
 import fs from "node:fs/promises";
+import os from "node:os";
 import path from "node:path";
-import { pathToFileURL } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 
-const artifactPath =
-  String.raw`C:\Users\sebag\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\node_modules\@oai\artifact-tool\dist\artifact_tool.mjs`;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const projectRoot = path.resolve(__dirname, "..");
+const artifactPath = path.join(
+  os.homedir(),
+  ".cache",
+  "codex-runtimes",
+  "codex-primary-runtime",
+  "dependencies",
+  "node",
+  "node_modules",
+  "@oai",
+  "artifact-tool",
+  "dist",
+  "artifact_tool.mjs"
+);
 const { Presentation, PresentationFile } = await import(pathToFileURL(artifactPath).href);
 
-const OUTPUT_PPTX = String.raw`C:\Users\sebag\Documents\Libre Mercado\outputs\LibreMercado-Presentacion-Mejorada.pptx`;
-const TMP_ROOT = String.raw`C:\Users\sebag\AppData\Local\Temp\codex-presentations\libre-mercado-mejorada`;
+const OUTPUT_PPTX = path.join(projectRoot, "outputs", "LibreMercado-Presentacion-Mejorada.pptx");
+const TMP_ROOT = path.join(os.tmpdir(), "codex-presentations", "libre-mercado-mejorada");
 const PREVIEW_DIR = path.join(TMP_ROOT, "preview");
 
 await fs.mkdir(PREVIEW_DIR, { recursive: true });

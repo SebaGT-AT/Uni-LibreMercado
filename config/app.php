@@ -7,7 +7,7 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 define('APP_NAME', 'Libre Mercado');
-define('BASE_URL', '/Libre Mercado');
+define('BASE_URL', rtrim((string) envValue('BASE_URL', ''), '/'));
 
 date_default_timezone_set('America/Santiago');
 
