@@ -1,0 +1,120 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: libre_mercado_web
+    ports:
+      - "8080:80"
+    environment:
+      DB_USER: root
+      DB_PASS: root
+      DB_CENTRAL_HOST: nodo_central
+      DB_CENTRAL_PORT: 3306
+      DB_CENTRAL_NAME: libre_mercado_central
+      DB_NORTE_HOST: nodo_sucursal_norte
+      DB_NORTE_PORT: 3306
+      DB_NORTE_NAME: libre_mercado_norte
+      DB_CENTRO_HOST: nodo_sucursal_centro
+      DB_CENTRO_PORT: 3306
+      DB_CENTRO_NAME: libre_mercado_centro
+      DB_SUR_HOST: nodo_sucursal_sur
+      DB_SUR_PORT: 3306
+      DB_SUR_NAME: libre_mercado_sur
+    depends_on:
+      nodo_central:
+        condition: service_healthy
+      nodo_sucursal_norte:
+        condition: service_healthy
+      nodo_sucursal_centro:
+        condition: service_healthy
+      nodo_sucursal_sur:
+        condition: service_healthy
+    volumes:
+      - ./:/var/www/html
+
+  nodo_central:
+    image: mysql:8.0
+    container_name: libre_mercado_nodo_central
+    restart: unless-stopped
+    ports:
+      - "3407:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: libre_mercado_central
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+    volumes:
+      - ./sql/docker/central.sql:/docker-entrypoint-initdb.d/01_init.sql:ro
+      - mysql_central_data:/var/lib/mysql
+
+  nodo_sucursal_norte:
+    image: mysql:8.0
+    container_name: libre_mercado_nodo_sucursal_norte
+    restart: unless-stopped
+    ports:
+      - "3408:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: libre_mercado_norte
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+    volumes:
+      - ./sql/docker/norte.sql:/docker-entrypoint-initdb.d/01_init.sql:ro
+      - mysql_norte_data:/var/lib/mysql
+
+  nodo_sucursal_centro:
+    image: mysql:8.0
+    container_name: libre_mercado_nodo_sucursal_centro
+    restart: unless-stopped
+    ports:
+      - "3409:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: libre_mercado_centro
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+    volumes:
+      - ./sql/docker/centro.sql:/docker-entrypoint-initdb.d/01_init.sql:ro
+      - mysql_centro_data:/var/lib/mysql
+
+  nodo_sucursal_sur:
+    image: mysql:8.0
+    container_name: libre_mercado_nodo_sucursal_sur
+    restart: unless-stopped
+    ports:
+      - "3410:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: libre_mercado_sur
+    command: --default-authentication-plugin=mysql_native_password
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 20s
+    volumes:
+      - ./sql/docker/sur.sql:/docker-entrypoint-initdb.d/01_init.sql:ro
+      - mysql_sur_data:/var/lib/mysql
+
+volumes:
+  mysql_central_data:
+  mysql_norte_data:
+  mysql_centro_data:
+  mysql_sur_data:

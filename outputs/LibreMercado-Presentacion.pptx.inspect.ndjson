@@ -1,0 +1,223 @@
+{"kind":"deck","id":"pr/ktb8zw","name":"Deck"}
+{"kind":"layout","layoutId":"826eeff7-98bf-41f4-bd63-596757c5711d","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"b4e3588d-850b-4f07-98de-2ada57dbcdd4","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/gmwzvt","slide":1,"title":"3 NODOS","textShapes":9}
+{"kind":"shape","id":"sh/nuxc3ylc","slide":1,"bbox":[770,84,390,548]}
+{"kind":"shape","id":"sh/gbq1oryt","slide":1,"bbox":[820,144,290,116]}
+{"kind":"textbox","id":"sh/5wjudg7a","slide":1,"text":"3 NODOS","textPreview":"3 NODOS","textChars":7,"textLines":1,"bbox":[850,170,220,44]}
+{"kind":"textbox","id":"sh/yhgn29gr","slide":1,"text":"Arquitectura distribuida","textPreview":"Arquitectura distribuida","textChars":24,"textLines":1,"bbox":[850,214,220,26]}
+{"kind":"shape","id":"sh/n29gr2p8","slide":1,"bbox":[802,300,326,214]}
+{"kind":"textbox","id":"sh/gn29gr2p","slide":1,"text":"Stack","textPreview":"Stack","textChars":5,"textLines":1,"bbox":[830,326,200,34]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":1,"text":"- PHP puro\n- PDO + MySQL\n- Docker y XAMPP\n- Bootstrap 5 + Git","textPreview":"- PHP puro | - PDO + MySQL | - Docker y XAMPP | - Bootstrap 5 + Git","textChars":61,"textLines":4,"bbox":[830,372,250,128]}
+{"kind":"textbox","id":"sh/ytsvu9kn","slide":1,"text":"EVALUACION DE SISTEMAS DISTRIBUIDOS","textPreview":"EVALUACION DE SISTEMAS DISTRIBUIDOS","textChars":35,"textLines":1,"bbox":[72,96,330,24]}
+{"kind":"textbox","id":"sh/neloj2t8","slide":1,"text":"Libre Mercado","textPreview":"Libre Mercado","textChars":13,"textLines":1,"bbox":[72,150,600,74]}
+{"kind":"textbox","id":"sh/nap4r65w","slide":1,"text":"Sistema de comercio electronico distribuido con CRUD completo, autenticacion segura, transacciones ACID y enfoque CAP de tipo CP.","textPreview":"Sistema de comercio electronico distribuido con CRUD completo, autenticacion segura, transacciones ACID y enfoque CAP de tipo CP.","textChars":129,"textLines":1,"bbox":[72,242,580,120]}
+{"kind":"textbox","id":"sh/upwb2hwf","slide":1,"text":"Objetivo de la exposicion: mostrar como funciona el proyecto completo y justificar sus decisiones tecnicas.","textPreview":"Objetivo de la exposicion: mostrar como funciona el proyecto completo y justificar sus decisiones tecnicas.","textChars":107,"textLines":1,"bbox":[72,408,540,80]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":1,"text":"Proyecto listo para demo con Docker, XAMPP, Git y cliente DB","textPreview":"Proyecto listo para demo con Docker, XAMPP, Git y cliente DB","textChars":60,"textLines":1,"bbox":[72,612,520,20]}
+{"kind":"notes","id":"nt/gmwzvt","slide":1,"text":""}
+{"kind":"slide","id":"sl/y599d5","slide":2,"title":"LIBRE MERCADO","textShapes":19}
+{"kind":"textbox","id":"sh/fepkzupw","slide":2,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,46,240,24]}
+{"kind":"textbox","id":"sh/4zidonyd","slide":2,"text":"Problema, objetivo y stack de desarrollo","textPreview":"Problema, objetivo y stack de desarrollo","textChars":40,"textLines":1,"bbox":[72,74,940,44]}
+{"kind":"shape","id":"sh/xkf6dcbu","slide":2,"bbox":[72,132,1136,2]}
+{"kind":"shape","id":"sh/mlkjm1cf","slide":2,"bbox":[72,172,534,450]}
+{"kind":"textbox","id":"sh/f6dcbulw","slide":2,"text":"Problema a resolver","textPreview":"Problema a resolver","textChars":19,"textLines":1,"bbox":[98,198,260,32]}
+{"kind":"textbox","id":"sh/4r65wjud","slide":2,"text":"- Centralizar modulos de un e-commerce academico.\n- Evitar inconsistencias entre stock y ventas.\n- Simular distribucion real con varios nodos.","textPreview":"- Centralizar modulos de un e-commerce academico. | - Evitar inconsistencias entre stock y ventas. | - Simular distribucion real con vari...","textChars":142,"textLines":3,"bbox":[98,246,450,120]}
+{"kind":"textbox","id":"sh/xc3ylc7u","slide":2,"text":"Objetivo del proyecto","textPreview":"Objetivo del proyecto","textChars":21,"textLines":1,"bbox":[98,418,250,32]}
+{"kind":"textbox","id":"sh/m94fu18j","slide":2,"text":"- Cumplir toda la rubrica.\n- Entregar una aplicacion funcional, segura y documentada.\n- Defender ACID, CAP y flujo distribuido.","textPreview":"- Cumplir toda la rubrica. | - Entregar una aplicacion funcional, segura y documentada. | - Defender ACID, CAP y flujo distribuido.","textChars":127,"textLines":3,"bbox":[98,466,450,120]}
+{"kind":"shape","id":"sh/fu18jqh0","slide":2,"bbox":[640,172,568,450]}
+{"kind":"textbox","id":"sh/r65wjudg","slide":2,"text":"Stack implementado","textPreview":"Stack implementado","textChars":18,"textLines":1,"bbox":[668,198,220,32]}
+{"kind":"shape","id":"sh/ylc7u54z","slide":2,"bbox":[668,248,160,118]}
+{"kind":"textbox","id":"sh/9cvixcze","slide":2,"text":"PHP","textPreview":"PHP","textChars":3,"textLines":1,"bbox":[688,266,120,40]}
+{"kind":"textbox","id":"sh/gr2p8nqx","slide":2,"text":"Backend puro y MVC simple","textPreview":"Backend puro y MVC simple","textChars":25,"textLines":1,"bbox":[688,306,120,46]}
+{"kind":"shape","id":"sh/nih4byhg","slide":2,"bbox":[844,248,160,118]}
+{"kind":"textbox","id":"sh/yxobm58z","slide":2,"text":"PDO","textPreview":"PDO","textChars":3,"textLines":1,"bbox":[864,266,120,40]}
+{"kind":"textbox","id":"sh/5o7qpg3e","slide":2,"text":"Prepared statements y TX","textPreview":"Prepared statements y TX","textChars":24,"textLines":1,"bbox":[864,306,120,46]}
+{"kind":"shape","id":"sh/g3ex0nux","slide":2,"bbox":[1020,248,160,118]}
+{"kind":"textbox","id":"sh/rmhk3q5o","slide":2,"text":"MySQL","textPreview":"MySQL","textChars":5,"textLines":1,"bbox":[1040,266,120,40]}
+{"kind":"textbox","id":"sh/y1kre1w7","slide":2,"text":"Tres bases de datos","textPreview":"Tres bases de datos","textChars":19,"textLines":1,"bbox":[1040,306,120,46]}
+{"kind":"shape","id":"sh/6dcbulwv","slide":2,"bbox":[668,392,160,118]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":2,"text":"Docker","textPreview":"Docker","textChars":6,"textLines":1,"bbox":[688,410,120,40]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":2,"text":"Entorno reproducible","textPreview":"Entorno reproducible","textChars":20,"textLines":1,"bbox":[688,450,120,46]}
+{"kind":"shape","id":"sh/d4vmtwra","slide":2,"bbox":[844,392,160,118]}
+{"kind":"textbox","id":"sh/61032lsz","slide":2,"text":"XAMPP","textPreview":"XAMPP","textChars":5,"textLines":1,"bbox":[864,410,120,40]}
+{"kind":"textbox","id":"sh/vmtwra5g","slide":2,"text":"Ejecucion local clasica","textPreview":"Ejecucion local clasica","textChars":23,"textLines":1,"bbox":[864,450,120,46]}
+{"kind":"shape","id":"sh/o7qpg3ex","slide":2,"bbox":[1020,392,160,118]}
+{"kind":"textbox","id":"sh/dsji5sne","slide":2,"text":"Git","textPreview":"Git","textChars":3,"textLines":1,"bbox":[1040,410,120,40]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":2,"text":"Versionado por fases","textPreview":"Versionado por fases","textChars":20,"textLines":1,"bbox":[1040,450,120,46]}
+{"kind":"notes","id":"nt/y599d5","slide":2,"text":""}
+{"kind":"slide","id":"sl/0n5v0v","slide":3,"title":"LIBRE MERCADO","textShapes":12}
+{"kind":"textbox","id":"sh/j6tovaho","slide":3,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,46,240,24]}
+{"kind":"textbox","id":"sh/crmhk3q5","slide":3,"text":"Arquitectura distribuida: 3 nodos y 3 conexiones PDO","textPreview":"Arquitectura distribuida: 3 nodos y 3 conexiones PDO","textChars":52,"textLines":1,"bbox":[72,74,940,44]}
+{"kind":"shape","id":"sh/1cfa9w3m","slide":3,"bbox":[72,132,1136,2]}
+{"kind":"shape","id":"sh/uxc3ylc7","slide":3,"bbox":[72,190,350,250]}
+{"kind":"textbox","id":"sh/ji5snelo","slide":3,"text":"Nodo 1","textPreview":"Nodo 1","textChars":6,"textLines":1,"bbox":[94,206,306,34]}
+{"kind":"textbox","id":"sh/c3ylc7u5","slide":3,"text":"Base: libre_mercado_productos","textPreview":"Base: libre_mercado_productos","textChars":29,"textLines":1,"bbox":[94,240,306,24]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":3,"text":"- Productos\n- Sucursales\n- Stock\n- Inventario por sede","textPreview":"- Productos | - Sucursales | - Stock | - Inventario por sede","textChars":54,"textLines":4,"bbox":[94,282,306,124]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":3,"bbox":[465,190,350,250]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":3,"text":"Nodo 2","textPreview":"Nodo 2","textChars":6,"textLines":1,"bbox":[487,206,306,34]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":3,"text":"Base: libre_mercado_clientes","textPreview":"Base: libre_mercado_clientes","textChars":28,"textLines":1,"bbox":[487,240,306,24]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":3,"text":"- Usuarios\n- Clientes\n- Autenticacion\n- Roles","textPreview":"- Usuarios | - Clientes | - Autenticacion | - Roles","textChars":45,"textLines":4,"bbox":[487,282,306,124]}
+{"kind":"shape","id":"sh/xs72x4na","slide":3,"bbox":[858,190,350,250]}
+{"kind":"textbox","id":"sh/87ed8bat","slide":3,"text":"Nodo 3","textPreview":"Nodo 3","textChars":6,"textLines":1,"bbox":[880,206,306,34]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":3,"text":"Base: libre_mercado_ventas","textPreview":"Base: libre_mercado_ventas","textChars":26,"textLines":1,"bbox":[880,240,306,24]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":3,"text":"- Compras\n- Carritos\n- Ventas\n- distributed_transactions","textPreview":"- Compras | - Carritos | - Ventas | - distributed_transactions","textChars":56,"textLines":4,"bbox":[880,282,306,124]}
+{"kind":"shape","id":"sh/1gvy90je","slide":3,"bbox":[422,308,44,4]}
+{"kind":"shape","id":"sh/8z25kb6x","slide":3,"bbox":[815,308,44,4]}
+{"kind":"shape","id":"sh/fa9w3m94","slide":3,"bbox":[166,492,948,112]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":3,"text":"La aplicacion web coordina los nodos desde PHP. Cada modelo usa la conexion que corresponde a su dominio y, en operaciones criticas, sincroniza cambios entre nodos.","textPreview":"La aplicacion web coordina los nodos desde PHP. Cada modelo usa la conexion que corresponde a su dominio y, en operaciones criticas, sinc...","textChars":164,"textLines":1,"bbox":[194,520,892,54]}
+{"kind":"notes","id":"nt/0n5v0v","slide":3,"text":""}
+{"kind":"slide","id":"sl/u5r0os","slide":4,"title":"LIBRE MERCADO","textShapes":6}
+{"kind":"textbox","id":"sh/c7u54zid","slide":4,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,46,240,24]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":4,"text":"Modelo de datos y modulos cubiertos","textPreview":"Modelo de datos y modulos cubiertos","textChars":35,"textLines":1,"bbox":[72,74,940,44]}
+{"kind":"shape","id":"sh/u18jqh0f","slide":4,"bbox":[72,132,1136,2]}
+{"kind":"shape","id":"sh/1032lszq","slide":4,"bbox":[72,172,548,438]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":4,"text":"CRUD implementados","textPreview":"CRUD implementados","textChars":18,"textLines":1,"bbox":[100,198,280,30]}
+{"kind":"textbox","id":"sh/judg7ads","slide":4,"text":"- Productos\n- Usuarios\n- Clientes\n- Sucursales\n- Stock\n- Proveedores\n- Compras\n- Carritos\n- Ventas","textPreview":"- Productos | - Usuarios | - Clientes | - Sucursales | - Stock | - Proveedores | - Compras | - Carritos | - Ventas","textChars":98,"textLines":9,"bbox":[100,244,474,268]}
+{"kind":"shape","id":"sh/u9knih4b","slide":4,"bbox":[660,172,548,438]}
+{"kind":"textbox","id":"sh/54zidony","slide":4,"text":"Reglas de datos clave","textPreview":"Reglas de datos clave","textChars":21,"textLines":1,"bbox":[688,198,280,30]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":4,"text":"- Productos y usuarios usan borrado logico.\n- Stock se controla por producto y sucursal.\n- Compras incrementan inventario.\n- Ventas descuentan inventario.\n- Las tablas detalle entregan trazabilidad.","textPreview":"- Productos y usuarios usan borrado logico. | - Stock se controla por producto y sucursal. | - Compras incrementan inventario. | - Ventas...","textChars":198,"textLines":5,"bbox":[688,244,470,156]}
+{"kind":"notes","id":"nt/u5r0os","slide":4,"text":""}
+{"kind":"slide","id":"sl/w7ignx","slide":5,"title":"LIBRE MERCADO","textShapes":6}
+{"kind":"textbox","id":"sh/m58z25kb","slide":5,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,46,240,24]}
+{"kind":"textbox","id":"sh/twra5gbq","slide":5,"text":"Interfaz y experiencia de usuario","textPreview":"Interfaz y experiencia de usuario","textChars":33,"textLines":1,"bbox":[72,74,940,44]}
+{"kind":"shape","id":"sh/4byhgn29","slide":5,"bbox":[72,132,1136,2]}
+{"kind":"shape","id":"sh/b2hwfyxo","slide":5,"bbox":[72,172,360,432]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":5,"text":"Frontend solicitado","textPreview":"Frontend solicitado","textChars":19,"textLines":1,"bbox":[98,198,250,30]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":5,"text":"- Bootstrap 5\n- Navbar dinamica\n- Tablas\n- Formularios\n- Boton volver\n- Alertas de exito y error","textPreview":"- Bootstrap 5 | - Navbar dinamica | - Tablas | - Formularios | - Boton volver | - Alertas de exito y error","textChars":96,"textLines":6,"bbox":[98,244,292,184]}
+{"kind":"shape","id":"sh/4nap4r65","slide":5,"bbox":[466,172,742,432]}
+{"kind":"textbox","id":"sh/bat47y1k","slide":5,"text":"Pantallas principales","textPreview":"Pantallas principales","textChars":21,"textLines":1,"bbox":[494,198,300,30]}
+{"kind":"textbox","id":"sh/4byhgn29","slide":5,"text":"Cada pagina actua como controlador liviano y reutiliza modelos separados para acceso a datos.","textPreview":"Cada pagina actua como controlador liviano y reutiliza modelos separados para acceso a datos.","textChars":93,"textLines":1,"bbox":[1038,262,140,232]}
+{"kind":"chart","id":"ch/61032lsz","slide":5,"name":"","chartType":"bar","bbox":[514,252,500,250]}
+{"kind":"notes","id":"nt/w7ignx","slide":5,"text":""}
+{"kind":"slide","id":"sl/cutqar","slide":6,"title":"LIBRE MERCADO","textShapes":14}
+{"kind":"textbox","id":"sh/i9s36hcr","slide":6,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,46,240,24]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":6,"text":"Seguridad y autenticacion","textPreview":"Seguridad y autenticacion","textChars":25,"textLines":1,"bbox":[72,74,940,44]}
+{"kind":"shape","id":"sh/0fepkzup","slide":6,"bbox":[72,132,1136,2]}
+{"kind":"shape","id":"sh/bi9s36hc","slide":6,"bbox":[72,186,250,116]}
+{"kind":"textbox","id":"sh/ixczed8v","slide":6,"text":"ADMIN / CLIENTE","textPreview":"ADMIN / CLIENTE","textChars":15,"textLines":1,"bbox":[92,204,210,40]}
+{"kind":"textbox","id":"sh/tovahoza","slide":6,"text":"Roles por sesion","textPreview":"Roles por sesion","textChars":16,"textLines":1,"bbox":[92,244,210,46]}
+{"kind":"shape","id":"sh/032lszqt","slide":6,"bbox":[338,186,250,116]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":6,"text":"password_hash()","textPreview":"password_hash()","textChars":15,"textLines":1,"bbox":[358,204,210,40]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":6,"text":"Hash de contrase�as","textPreview":"Hash de contrase�as","textChars":19,"textLines":1,"bbox":[358,244,210,46]}
+{"kind":"shape","id":"sh/ovahoza1","slide":6,"bbox":[604,186,250,116]}
+{"kind":"textbox","id":"sh/dg7adsji","slide":6,"text":"password_verify()","textPreview":"password_verify()","textChars":17,"textLines":1,"bbox":[624,204,210,40]}
+{"kind":"textbox","id":"sh/6tovahoz","slide":6,"text":"Validacion de acceso","textPreview":"Validacion de acceso","textChars":20,"textLines":1,"bbox":[624,244,210,46]}
+{"kind":"shape","id":"sh/vahoza1g","slide":6,"bbox":[870,186,338,116]}
+{"kind":"textbox","id":"sh/onyd0z61","slide":6,"text":"Prepared statements","textPreview":"Prepared statements","textChars":19,"textLines":1,"bbox":[890,204,298,40]}
+{"kind":"textbox","id":"sh/d8v6psfi","slide":6,"text":"Proteccion contra SQL Injection","textPreview":"Proteccion contra SQL Injection","textChars":31,"textLines":1,"bbox":[890,244,298,46]}
+{"kind":"shape","id":"sh/6hcrmhk3","slide":6,"bbox":[72,340,534,260]}
+{"kind":"textbox","id":"sh/z25kb6xk","slide":6,"text":"Controles implementados","textPreview":"Controles implementados","textChars":23,"textLines":1,"bbox":[98,366,260,30]}
+{"kind":"textbox","id":"sh/oj2t83it","slide":6,"text":"- Sesiones para autenticacion.\n- Restriccion por rol en modulos ADMIN.\n- Escape HTML en salida.\n- Validaciones de formularios.","textPreview":"- Sesiones para autenticacion. | - Restriccion por rol en modulos ADMIN. | - Escape HTML en salida. | - Validaciones de formularios.","textChars":126,"textLines":4,"bbox":[98,412,460,128]}
+{"kind":"shape","id":"sh/d4vmtwra","slide":6,"bbox":[638,340,570,260]}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":6,"text":"Flujo de login","textPreview":"Flujo de login","textChars":14,"textLines":1,"bbox":[666,366,260,30]}
+{"kind":"textbox","id":"sh/obm58z25","slide":6,"text":"- 1. Usuario ingresa credenciales.\n- 2. Nodo 2 busca username activo.\n- 3. password_verify() valida la contrase�a.\n- 4. Si coincide, se crea sesion y se entra al dashboard.","textPreview":"- 1. Usuario ingresa credenciales. | - 2. Nodo 2 busca username activo. | - 3. password_verify() valida la contrase�a. | - 4. Si coincide...","textChars":172,"textLines":4,"bbox":[666,412,486,128]}
+{"kind":"notes","id":"nt/cutqar","slide":6,"text":""}
+{"kind":"slide","id":"sl/ljiabe","slide":7,"title":"LIBRE MERCADO","textShapes":7}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":7,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,46,240,24]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":7,"text":"Compras y carritos: flujo previo a la venta","textPreview":"Compras y carritos: flujo previo a la venta","textChars":43,"textLines":1,"bbox":[72,74,940,44]}
+{"kind":"shape","id":"sh/3ylc7u54","slide":7,"bbox":[72,132,1136,2]}
+{"kind":"shape","id":"sh/s72x4nap","slide":7,"bbox":[72,180,540,390]}
+{"kind":"textbox","id":"sh/lszqtcj6","slide":7,"text":"Flujo de compras","textPreview":"Flujo de compras","textChars":16,"textLines":1,"bbox":[100,206,220,30]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":7,"text":"- Se selecciona proveedor y sucursal.\n- Se agregan productos, cantidades y costo.\n- Nodo 3 registra compra y detalle.\n- Nodo 1 incrementa stock.\n- Si hay error, se hace rollback.","textPreview":"- Se selecciona proveedor y sucursal. | - Se agregan productos, cantidades y costo. | - Nodo 3 registra compra y detalle. | - Nodo 1 incr...","textChars":178,"textLines":5,"bbox":[100,252,460,156]}
+{"kind":"shape","id":"sh/3m94fu18","slide":7,"bbox":[668,180,540,390]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":7,"text":"Flujo de carrito","textPreview":"Flujo de carrito","textChars":16,"textLines":1,"bbox":[696,206,220,30]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":7,"text":"- Se asocia a un cliente.\n- Se agregan productos y cantidades.\n- Se guarda cabecera y detalle en Nodo 3.\n- Sirve como paso previo al cierre comercial.","textPreview":"- Se asocia a un cliente. | - Se agregan productos y cantidades. | - Se guarda cabecera y detalle en Nodo 3. | - Sirve como paso previo a...","textChars":150,"textLines":4,"bbox":[696,252,460,128]}
+{"kind":"textbox","id":"sh/58z25kb6","slide":7,"text":"Ambos modulos permiten explicar el movimiento de datos antes de registrar una venta definitiva.","textPreview":"Ambos modulos permiten explicar el movimiento de datos antes de registrar una venta definitiva.","textChars":95,"textLines":1,"bbox":[72,604,1136,36]}
+{"kind":"notes","id":"nt/ljiabe","slide":7,"text":""}
+{"kind":"slide","id":"sl/boswr6","slide":8,"title":"LIBRE MERCADO","textShapes":7}
+{"kind":"textbox","id":"sh/1032lszq","slide":8,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,46,240,24]}
+{"kind":"textbox","id":"sh/u9knih4b","slide":8,"text":"Venta distribuida con ACID y Two Phase Commit simplificado","textPreview":"Venta distribuida con ACID y Two Phase Commit simplificado","textChars":58,"textLines":1,"bbox":[72,74,940,44]}
+{"kind":"shape","id":"sh/judg7ads","slide":8,"bbox":[72,132,1136,2]}
+{"kind":"shape","id":"sh/c7u54zid","slide":8,"bbox":[72,172,720,438]}
+{"kind":"textbox","id":"sh/1orytsvu","slide":8,"text":"Secuencia de la venta","textPreview":"Secuencia de la venta","textChars":21,"textLines":1,"bbox":[100,198,300,30]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":8,"text":"- 1. Se recibe cliente, sucursal y productos.\n- 2. Se registra PREPARED en distributed_transactions.\n- 3. Se abren transacciones en Nodo 1 y Nodo 3.\n- 4. Se verifica stock por sucursal.\n- 5. Se descuenta stock y se crea venta + detalle.\n- 6. Si todo sale bien, ambos nodos hacen COMMIT.\n- 7. Si algo falla, ambos nodos hacen ROLLBACK y queda ABORTED.","textPreview":"- 1. Se recibe cliente, sucursal y productos. | - 2. Se registra PREPARED en distributed_transactions. | - 3. Se abren transacciones en N...","textChars":350,"textLines":7,"bbox":[100,244,640,212]}
+{"kind":"shape","id":"sh/jm1cfa9w","slide":8,"bbox":[828,172,380,438]}
+{"kind":"textbox","id":"sh/cvixczed","slide":8,"text":"Propiedades ACID","textPreview":"Propiedades ACID","textChars":16,"textLines":1,"bbox":[856,198,220,30]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":8,"text":"- Atomicidad\n- Consistencia\n- Aislamiento\n- Durabilidad","textPreview":"- Atomicidad | - Consistencia | - Aislamiento | - Durabilidad","textChars":55,"textLines":4,"bbox":[856,244,300,144]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":8,"text":"La venta nunca queda a medias. O se confirma completa en ambos nodos o se revierte completa.","textPreview":"La venta nunca queda a medias. O se confirma completa en ambos nodos o se revierte completa.","textChars":92,"textLines":1,"bbox":[856,388,300,150]}
+{"kind":"notes","id":"nt/boswr6","slide":8,"text":""}
+{"kind":"slide","id":"sl/85a1cm","slide":9,"title":"LIBRE MERCADO","textShapes":9}
+{"kind":"textbox","id":"sh/hwfyxobm","slide":9,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,46,240,24]}
+{"kind":"textbox","id":"sh/65wjudg7","slide":9,"text":"Teorema CAP: se eligio CP","textPreview":"Teorema CAP: se eligio CP","textChars":25,"textLines":1,"bbox":[72,74,940,44]}
+{"kind":"shape","id":"sh/zqtcj6to","slide":9,"bbox":[72,132,1136,2]}
+{"kind":"shape","id":"sh/oza1gvy9","slide":9,"bbox":[72,176,372,414]}
+{"kind":"textbox","id":"sh/hk3q5o7q","slide":9,"text":"CP","textPreview":"CP","textChars":2,"textLines":1,"bbox":[102,212,180,54]}
+{"kind":"textbox","id":"sh/6xkf6dcb","slide":9,"text":"Consistency + Partition Tolerance","textPreview":"Consistency + Partition Tolerance","textChars":33,"textLines":1,"bbox":[102,288,270,60]}
+{"kind":"textbox","id":"sh/zed8v6ps","slide":9,"text":"La integridad del inventario y de las ventas es prioritaria frente a la disponibilidad total del sistema.","textPreview":"La integridad del inventario y de las ventas es prioritaria frente a la disponibilidad total del sistema.","textChars":105,"textLines":1,"bbox":[102,372,290,158]}
+{"kind":"shape","id":"sh/orytsvu9","slide":9,"bbox":[484,176,724,190]}
+{"kind":"textbox","id":"sh/hcrmhk3q","slide":9,"text":"Justificacion tecnica","textPreview":"Justificacion tecnica","textChars":21,"textLines":1,"bbox":[512,202,280,30]}
+{"kind":"textbox","id":"sh/d4vmtwra","slide":9,"text":"- No se permiten ventas inconsistentes.\n- El inventario debe ser confiable.\n- Si un nodo cae, la operacion se bloquea.","textPreview":"- No se permiten ventas inconsistentes. | - El inventario debe ser confiable. | - Si un nodo cae, la operacion se bloquea.","textChars":118,"textLines":3,"bbox":[512,246,650,120]}
+{"kind":"shape","id":"sh/oj2t83it","slide":9,"bbox":[484,388,724,202]}
+{"kind":"textbox","id":"sh/vy90je9c","slide":9,"text":"Ejemplo de fallo","textPreview":"Ejemplo de fallo","textChars":16,"textLines":1,"bbox":[512,414,240,30]}
+{"kind":"textbox","id":"sh/6dcbulwv","slide":9,"text":"- Falla el nodo de stock durante una venta.\n- La transaccion se aborta y no queda venta parcial.\n- Se sacrifica disponibilidad para evitar divergencia.","textPreview":"- Falla el nodo de stock durante una venta. | - La transaccion se aborta y no queda venta parcial. | - Se sacrifica disponibilidad para e...","textChars":151,"textLines":3,"bbox":[512,458,650,120]}
+{"kind":"notes","id":"nt/85a1cm","slide":9,"text":""}
+{"kind":"slide","id":"sl/eu7df7","slide":10,"title":"LIBRE MERCADO","textShapes":14}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":10,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,46,240,24]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":10,"text":"Uso de Docker, XAMPP, Git y cliente DB","textPreview":"Uso de Docker, XAMPP, Git y cliente DB","textChars":38,"textLines":1,"bbox":[72,74,940,44]}
+{"kind":"shape","id":"sh/qh0fepkz","slide":10,"bbox":[72,132,1136,2]}
+{"kind":"shape","id":"sh/1w7mp0bi","slide":10,"bbox":[72,188,250,120]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":10,"text":"Docker","textPreview":"Docker","textChars":6,"textLines":1,"bbox":[92,206,210,40]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":10,"text":"PHP + Apache + MySQL con compose","textPreview":"PHP + Apache + MySQL con compose","textChars":32,"textLines":1,"bbox":[92,246,210,46]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":10,"bbox":[340,188,250,120]}
+{"kind":"textbox","id":"sh/1kre1w7m","slide":10,"text":"XAMPP","textPreview":"XAMPP","textChars":5,"textLines":1,"bbox":[360,206,210,40]}
+{"kind":"textbox","id":"sh/c3ylc7u5","slide":10,"text":"Alternativa local clasica","textPreview":"Alternativa local clasica","textChars":25,"textLines":1,"bbox":[360,246,210,46]}
+{"kind":"shape","id":"sh/a1gvy90j","slide":10,"bbox":[608,188,250,120]}
+{"kind":"textbox","id":"sh/zidonyd0","slide":10,"text":"Git","textPreview":"Git","textChars":3,"textLines":1,"bbox":[628,206,210,40]}
+{"kind":"textbox","id":"sh/s36hcrmh","slide":10,"text":"Historial y control de cambios","textPreview":"Historial y control de cambios","textChars":30,"textLines":1,"bbox":[628,246,210,46]}
+{"kind":"shape","id":"sh/hoza1gvy","slide":10,"bbox":[876,188,332,120]}
+{"kind":"textbox","id":"sh/ap4r65wj","slide":10,"text":"Cliente DB","textPreview":"Cliente DB","textChars":10,"textLines":1,"bbox":[896,206,292,40]}
+{"kind":"textbox","id":"sh/za1gvy90","slide":10,"text":"phpMyAdmin / DBeaver / Workbench","textPreview":"phpMyAdmin / DBeaver / Workbench","textChars":32,"textLines":1,"bbox":[896,246,292,46]}
+{"kind":"shape","id":"sh/svu9knih","slide":10,"bbox":[72,346,548,250]}
+{"kind":"textbox","id":"sh/hgn29gr2","slide":10,"text":"Comandos clave","textPreview":"Comandos clave","textChars":14,"textLines":1,"bbox":[100,372,220,30]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":10,"text":"- docker compose up -d --build\n- docker compose ps\n- docker compose logs web\n- docker compose logs db","textPreview":"- docker compose up -d --build | - docker compose ps | - docker compose logs web | - docker compose logs db","textChars":101,"textLines":4,"bbox":[100,418,460,128]}
+{"kind":"shape","id":"sh/3ylc7u54","slide":10,"bbox":[660,346,548,250]}
+{"kind":"textbox","id":"sh/vu9knih4","slide":10,"text":"Que conviene mostrar","textPreview":"Que conviene mostrar","textChars":20,"textLines":1,"bbox":[688,372,300,30]}
+{"kind":"textbox","id":"sh/29gr2p8n","slide":10,"text":"- Las 3 bases separadas.\n- Login con admin.\n- Compra que aumenta stock.\n- Venta que descuenta stock y deja rastro transaccional.","textPreview":"- Las 3 bases separadas. | - Login con admin. | - Compra que aumenta stock. | - Venta que descuenta stock y deja rastro transaccional.","textChars":128,"textLines":4,"bbox":[688,418,460,128]}
+{"kind":"notes","id":"nt/eu7df7","slide":10,"text":""}
+{"kind":"slide","id":"sl/nguav7","slide":11,"title":"LIBRE MERCADO","textShapes":23}
+{"kind":"textbox","id":"sh/8v6psfil","slide":11,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,46,240,24]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":11,"text":"Cumplimiento de la rubrica","textPreview":"Cumplimiento de la rubrica","textChars":26,"textLines":1,"bbox":[72,74,940,44]}
+{"kind":"shape","id":"sh/qpg3ex0n","slide":11,"bbox":[72,132,1136,2]}
+{"kind":"shape","id":"sh/x4nap4r6","slide":11,"bbox":[72,174,1136,430]}
+{"kind":"shape","id":"sh/8jqh0fep","slide":11,"bbox":[96,214,1088,54]}
+{"kind":"textbox","id":"sh/fyxobm58","slide":11,"text":"CRUD completo","textPreview":"CRUD completo","textChars":13,"textLines":1,"bbox":[116,228,290,24]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":11,"text":"Cumplido","textPreview":"Cumplido","textChars":8,"textLines":1,"bbox":[436,228,160,24]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":11,"text":"9 modulos principales implementados.","textPreview":"9 modulos principales implementados.","textChars":36,"textLines":1,"bbox":[620,228,520,24]}
+{"kind":"shape","id":"sh/87ed8bat","slide":11,"bbox":[96,268,1088,54]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":11,"text":"Arquitectura distribuida","textPreview":"Arquitectura distribuida","textChars":24,"textLines":1,"bbox":[116,282,290,24]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":11,"text":"Cumplido","textPreview":"Cumplido","textChars":8,"textLines":1,"bbox":[436,282,160,24]}
+{"kind":"textbox","id":"sh/wjudg7ad","slide":11,"text":"3 bases y 3 conexiones PDO.","textPreview":"3 bases y 3 conexiones PDO.","textChars":27,"textLines":1,"bbox":[620,282,520,24]}
+{"kind":"shape","id":"sh/p4r65wju","slide":11,"bbox":[96,322,1088,54]}
+{"kind":"textbox","id":"sh/i5sneloj","slide":11,"text":"ACID","textPreview":"ACID","textChars":4,"textLines":1,"bbox":[116,336,290,24]}
+{"kind":"textbox","id":"sh/7qpg3ex0","slide":11,"text":"Cumplido","textPreview":"Cumplido","textChars":8,"textLines":1,"bbox":[436,336,160,24]}
+{"kind":"textbox","id":"sh/0bi9s36h","slide":11,"text":"Venta con commit y rollback coordinado.","textPreview":"Venta con commit y rollback coordinado.","textChars":39,"textLines":1,"bbox":[620,336,520,24]}
+{"kind":"shape","id":"sh/pwb2hwfy","slide":11,"bbox":[96,376,1088,54]}
+{"kind":"textbox","id":"sh/itgfmlkj","slide":11,"text":"CAP","textPreview":"CAP","textChars":3,"textLines":1,"bbox":[116,390,290,24]}
+{"kind":"textbox","id":"sh/7ed8bat4","slide":11,"text":"Cumplido","textPreview":"Cumplido","textChars":8,"textLines":1,"bbox":[436,390,160,24]}
+{"kind":"textbox","id":"sh/jqh0fepk","slide":11,"text":"Eleccion CP documentada y defendible.","textPreview":"Eleccion CP documentada y defendible.","textChars":37,"textLines":1,"bbox":[620,390,520,24]}
+{"kind":"shape","id":"sh/q5o7qpg3","slide":11,"bbox":[96,430,1088,54]}
+{"kind":"textbox","id":"sh/1w7mp0bi","slide":11,"text":"Seguridad","textPreview":"Seguridad","textChars":9,"textLines":1,"bbox":[116,444,290,24]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":11,"text":"Cumplido","textPreview":"Cumplido","textChars":8,"textLines":1,"bbox":[436,444,160,24]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":11,"text":"Hash, sesiones, roles y prepared statements.","textPreview":"Hash, sesiones, roles y prepared statements.","textChars":44,"textLines":1,"bbox":[620,444,520,24]}
+{"kind":"shape","id":"sh/qh0fepkz","slide":11,"bbox":[96,484,1088,54]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":11,"text":"Documentacion","textPreview":"Documentacion","textChars":13,"textLines":1,"bbox":[116,498,290,24]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":11,"text":"Cumplido","textPreview":"Cumplido","textChars":8,"textLines":1,"bbox":[436,498,160,24]}
+{"kind":"textbox","id":"sh/j6tovaho","slide":11,"text":"README, arquitectura, Docker, XAMPP y DB client.","textPreview":"README, arquitectura, Docker, XAMPP y DB client.","textChars":48,"textLines":1,"bbox":[620,498,520,24]}
+{"kind":"shape","id":"sh/ulwval87","slide":11,"bbox":[96,160,1088,54]}
+{"kind":"textbox","id":"sh/4nap4r65","slide":11,"text":"Criterio","textPreview":"Criterio","textChars":8,"textLines":1,"bbox":[116,174,290,24]}
+{"kind":"textbox","id":"sh/t83itgfm","slide":11,"text":"Estado","textPreview":"Estado","textChars":6,"textLines":1,"bbox":[436,174,160,24]}
+{"kind":"textbox","id":"sh/mhk3q5o7","slide":11,"text":"Evidencia","textPreview":"Evidencia","textChars":9,"textLines":1,"bbox":[620,174,520,24]}
+{"kind":"notes","id":"nt/nguav7","slide":11,"text":""}
+{"kind":"slide","id":"sl/fbg4v9","slide":12,"title":"CIERRE","textShapes":8}
+{"kind":"shape","id":"sh/8v6psfil","slide":12,"bbox":[72,84,1136,554]}
+{"kind":"textbox","id":"sh/fa9w3m94","slide":12,"text":"CIERRE","textPreview":"CIERRE","textChars":6,"textLines":1,"bbox":[112,132,200,22]}
+{"kind":"textbox","id":"sh/qpg3ex0n","slide":12,"text":"Libre Mercado demuestra un sistema distribuido funcional, seguro y defendible","textPreview":"Libre Mercado demuestra un sistema distribuido funcional, seguro y defendible","textChars":77,"textLines":1,"bbox":[112,182,760,102]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":12,"text":"La fortaleza del proyecto no es solo la interfaz: es la coordinacion real entre nodos, reglas de negocio, transacciones y decisiones de arquitectura.","textPreview":"La fortaleza del proyecto no es solo la interfaz: es la coordinacion real entre nodos, reglas de negocio, transacciones y decisiones de a...","textChars":149,"textLines":1,"bbox":[112,296,780,96]}
+{"kind":"textbox","id":"sh/8jqh0fep","slide":12,"text":"- Demo sugerida: login, compra, stock, venta, distributed_transactions.\n- Mensaje final: se privilegia la integridad de datos sobre la disponibilidad inconsistente.","textPreview":"- Demo sugerida: login, compra, stock, venta, distributed_transactions. | - Mensaje final: se privilegia la integridad de datos sobre la ...","textChars":164,"textLines":2,"bbox":[112,430,550,120]}
+{"kind":"shape","id":"sh/fyxobm58","slide":12,"bbox":[858,188,260,126]}
+{"kind":"textbox","id":"sh/qd4vmtwr","slide":12,"text":"3 nodos","textPreview":"3 nodos","textChars":7,"textLines":1,"bbox":[878,206,220,40]}
+{"kind":"textbox","id":"sh/xs72x4na","slide":12,"text":"1 coordinador PHP","textPreview":"1 coordinador PHP","textChars":17,"textLines":1,"bbox":[878,246,220,46]}
+{"kind":"shape","id":"sh/87ed8bat","slide":12,"bbox":[858,338,260,126]}
+{"kind":"textbox","id":"sh/ed8v6psf","slide":12,"text":"CP","textPreview":"CP","textChars":2,"textLines":1,"bbox":[878,356,220,40]}
+{"kind":"textbox","id":"sh/7y1kre1w","slide":12,"text":"Consistencia primero","textPreview":"Consistencia primero","textChars":20,"textLines":1,"bbox":[878,396,220,46]}
+{"kind":"notes","id":"nt/fbg4v9","slide":12,"text":""}

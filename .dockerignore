@@ -1,0 +1,7 @@
+docker/mysql_data
+.git
+.idea
+.vscode
+Thumbs.db
+Desktop.ini
+*.log

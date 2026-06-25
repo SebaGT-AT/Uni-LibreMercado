@@ -1,0 +1,170 @@
+{"kind":"deck","id":"pr/rdqzs0","name":"Deck"}
+{"kind":"layout","layoutId":"8ed664ab-e212-4c2c-97f3-eebf15a4313a","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"66598d9a-88f6-4f9e-ae0e-41fbb1bc2da4","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/pwtpt5","slide":1,"title":"TALLER SISTEMAS DISTRIBUIDOS","textShapes":15}
+{"kind":"shape","id":"sh/c7u54zid","slide":1,"bbox":[0,0,1280,720]}
+{"kind":"shape","id":"sh/jm1cfa9w","slide":1,"bbox":[748,118,420,470]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":1,"text":"TALLER SISTEMAS DISTRIBUIDOS","textPreview":"TALLER SISTEMAS DISTRIBUIDOS","textChars":28,"textLines":1,"bbox":[72,34,520,24]}
+{"kind":"textbox","id":"sh/1032lszq","slide":1,"text":"Tercera evaluacion: transacciones distribuidas, fallos y despliegue LAN","textPreview":"Tercera evaluacion: transacciones distribuidas, fallos y despliegue LAN","textChars":71,"textLines":1,"bbox":[72,64,620,24]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":1,"text":"Libre Mercado","textPreview":"Libre Mercado","textChars":13,"textLines":1,"bbox":[72,148,520,72]}
+{"kind":"textbox","id":"sh/judg7ads","slide":1,"text":"Sistema distribuido en PHP que coordina compras, ventas y stock entre un nodo central y tres sucursales, con procedimientos almacenados, AJAX y politica CP.","textPreview":"Sistema distribuido en PHP que coordina compras, ventas y stock entre un nodo central y tres sucursales, con procedimientos almacenados, ...","textChars":156,"textLines":1,"bbox":[72,238,590,120]}
+{"kind":"shape","id":"sh/u9knih4b","slide":1,"bbox":[798,166,150,102]}
+{"kind":"textbox","id":"sh/54zidony","slide":1,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[814,180,118,42]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":1,"text":"Nodos DB","textPreview":"Nodos DB","textChars":8,"textLines":1,"bbox":[814,224,118,36]}
+{"kind":"shape","id":"sh/ex0nuxc3","slide":1,"bbox":[970,166,150,102]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":1,"text":"9","textPreview":"9","textChars":1,"textLines":1,"bbox":[986,180,118,42]}
+{"kind":"textbox","id":"sh/w3m94fu1","slide":1,"text":"CRUD listos","textPreview":"CRUD listos","textChars":11,"textLines":1,"bbox":[986,224,118,36]}
+{"kind":"shape","id":"sh/loj2t83i","slide":1,"bbox":[798,294,150,102]}
+{"kind":"textbox","id":"sh/e9cvixcz","slide":1,"text":"ACID","textPreview":"ACID","textChars":4,"textLines":1,"bbox":[814,308,118,42]}
+{"kind":"textbox","id":"sh/3q5o7qpg","slide":1,"text":"Venta coordinada","textPreview":"Venta coordinada","textChars":16,"textLines":1,"bbox":[814,352,118,36]}
+{"kind":"shape","id":"sh/wb2hwfyx","slide":1,"bbox":[970,294,150,102]}
+{"kind":"textbox","id":"sh/lwval87e","slide":1,"text":"CP","textPreview":"CP","textChars":2,"textLines":1,"bbox":[986,308,118,42]}
+{"kind":"textbox","id":"sh/ahoza1gv","slide":1,"text":"CAP elegido","textPreview":"CAP elegido","textChars":11,"textLines":1,"bbox":[986,352,118,36]}
+{"kind":"shape","id":"sh/32lszqtc","slide":1,"bbox":[798,420,322,122]}
+{"kind":"textbox","id":"sh/v6psfil0","slide":1,"text":"Mensaje central","textPreview":"Mensaje central","textChars":15,"textLines":1,"bbox":[820,440,278,24]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":1,"text":"- Si una sucursal falla, solo esa sucursal deja de vender.\n- Las demas siguen operando.\n- Se protege la integridad del stock antes que vender inconsistente.","textPreview":"- Si una sucursal falla, solo esa sucursal deja de vender. | - Las demas siguen operando. | - Se protege la integridad del stock antes qu...","textChars":156,"textLines":3,"bbox":[820,480,278,38]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":1,"text":"Entorno: Docker para nodos, XAMPP como alternativa local, Git y cliente DB para inspeccion.","textPreview":"Entorno: Docker para nodos, XAMPP como alternativa local, Git y cliente DB para inspeccion.","textChars":91,"textLines":1,"bbox":[72,572,580,24]}
+{"kind":"notes","id":"nt/pwtpt5","slide":1,"text":""}
+{"kind":"slide","id":"sl/tybv8j","slide":2,"title":"LIBRE MERCADO","textShapes":6}
+{"kind":"shape","id":"sh/xs72x4na","slide":2,"bbox":[0,0,1280,88]}
+{"kind":"textbox","id":"sh/q1orytsv","slide":2,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,24,240,20]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":2,"text":"Que exige la tercera evaluacion y como se cubre","textPreview":"Que exige la tercera evaluacion y como se cubre","textChars":47,"textLines":1,"bbox":[72,46,1040,30]}
+{"kind":"shape","id":"sh/8z25kb6x","slide":2,"bbox":[72,104,1136,1]}
+{"kind":"shape","id":"sh/1gvy90je","slide":2,"bbox":[72,176,520,442]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":2,"text":"Exigencias del documento","textPreview":"Exigencias del documento","textChars":24,"textLines":1,"bbox":[94,196,476,24]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":2,"text":"- Compra distribuida entre sucursales.\n- Transacciones distribuidas con rollback total.\n- Procedimientos almacenados en MySQL.\n- Simulacion de caida y recuperacion de nodos.\n- PHP + AJAX como capa cliente-servidor.\n- Justificacion tecnica del modelo CAP.","textPreview":"- Compra distribuida entre sucursales. | - Transacciones distribuidas con rollback total. | - Procedimientos almacenados en MySQL. | - Si...","textChars":254,"textLines":6,"bbox":[94,236,476,358]}
+{"kind":"shape","id":"sh/8v6psfil","slide":2,"bbox":[616,176,592,442]}
+{"kind":"textbox","id":"sh/xczed8v6","slide":2,"text":"Cobertura en el proyecto","textPreview":"Cobertura en el proyecto","textChars":24,"textLines":1,"bbox":[638,196,548,24]}
+{"kind":"textbox","id":"sh/donyd0z6","slide":2,"text":"- Panel de nodos para marcar ONLINE / OFFLINE.\n- Checkout AJAX desde el flujo del cliente.\n- sp_realizar_compra, sp_actualizar_stock y sp_reconstruir_stock.\n- distributed_transactions para PREPARED / COMMITTED / ABORTED.\n- Docker Compose para simular LAN y multiples servicios.\n- README y documento de arquitectura para la defensa.","textPreview":"- Panel de nodos para marcar ONLINE / OFFLINE. | - Checkout AJAX desde el flujo del cliente. | - sp_realizar_compra, sp_actualizar_stock ...","textChars":331,"textLines":6,"bbox":[638,236,548,358]}
+{"kind":"notes","id":"nt/tybv8j","slide":2,"text":""}
+{"kind":"slide","id":"sl/0qet0b","slide":3,"title":"LIBRE MERCADO","textShapes":16}
+{"kind":"shape","id":"sh/mtwra5gb","slide":3,"bbox":[0,0,1280,88]}
+{"kind":"textbox","id":"sh/xkf6dcbu","slide":3,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,24,240,20]}
+{"kind":"textbox","id":"sh/4zidonyd","slide":3,"text":"Arquitectura LAN: coordinador, nodo central y sucursales","textPreview":"Arquitectura LAN: coordinador, nodo central y sucursales","textChars":56,"textLines":1,"bbox":[72,46,1040,30]}
+{"kind":"shape","id":"sh/f6dcbulw","slide":3,"bbox":[72,104,1136,1]}
+{"kind":"textbox","id":"sh/mlkjm1cf","slide":3,"text":"La aplicacion PHP expone la web en LAN y coordina cuatro bases de datos separadas. Cada sucursal conserva su operacion local.","textPreview":"La aplicacion PHP expone la web en LAN y coordina cuatro bases de datos separadas. Cada sucursal conserva su operacion local.","textChars":125,"textLines":1,"bbox":[72,150,1136,38]}
+{"kind":"shape","id":"sh/xc3ylc7u","slide":3,"bbox":[96,250,230,210]}
+{"kind":"textbox","id":"sh/4r65wjud","slide":3,"text":"Nodo Central","textPreview":"Nodo Central","textChars":12,"textLines":1,"bbox":[120,276,180,28]}
+{"kind":"textbox","id":"sh/fu18jqh0","slide":3,"text":"Base: libre_mercado_central","textPreview":"Base: libre_mercado_central","textChars":27,"textLines":1,"bbox":[120,310,180,24]}
+{"kind":"textbox","id":"sh/m94fu18j","slide":3,"text":"- productos\n- sucursales\n- usuarios y clientes\n- proveedores\n- ventas y detalle\n- node_status\n- tx distribuidas","textPreview":"- productos | - sucursales | - usuarios y clientes | - proveedores | - ventas y detalle | - node_status | - tx distribuidas","textChars":111,"textLines":7,"bbox":[120,350,180,140]}
+{"kind":"shape","id":"sh/sji5snel","slide":3,"bbox":[374,250,230,210]}
+{"kind":"textbox","id":"sh/h4byhgn2","slide":3,"text":"Sucursal Norte","textPreview":"Sucursal Norte","textChars":14,"textLines":1,"bbox":[398,276,180,28]}
+{"kind":"textbox","id":"sh/adsji5sn","slide":3,"text":"Base: libre_mercado_norte","textPreview":"Base: libre_mercado_norte","textChars":25,"textLines":1,"bbox":[398,310,180,24]}
+{"kind":"textbox","id":"sh/3ylc7u54","slide":3,"text":"- stock\n- carrito\n- detalle_carrito\n- compras\n- detalle_compras\n- stock_movimientos","textPreview":"- stock | - carrito | - detalle_carrito | - compras | - detalle_compras | - stock_movimientos","textChars":83,"textLines":6,"bbox":[398,350,180,132]}
+{"kind":"shape","id":"sh/s72x4nap","slide":3,"bbox":[652,250,230,210]}
+{"kind":"textbox","id":"sh/lszqtcj6","slide":3,"text":"Sucursal Centro","textPreview":"Sucursal Centro","textChars":15,"textLines":1,"bbox":[676,276,180,28]}
+{"kind":"textbox","id":"sh/a5gbq1or","slide":3,"text":"Base: libre_mercado_centro","textPreview":"Base: libre_mercado_centro","textChars":26,"textLines":1,"bbox":[676,310,180,24]}
+{"kind":"textbox","id":"sh/3m94fu18","slide":3,"text":"- stock local\n- carrito local\n- compras locales\n- historial de movimientos","textPreview":"- stock local | - carrito local | - compras locales | - historial de movimientos","textChars":74,"textLines":4,"bbox":[676,350,180,132]}
+{"kind":"shape","id":"sh/s36hcrmh","slide":3,"bbox":[930,250,230,210]}
+{"kind":"textbox","id":"sh/hoza1gvy","slide":3,"text":"Sucursal Sur","textPreview":"Sucursal Sur","textChars":12,"textLines":1,"bbox":[954,276,180,28]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":3,"text":"Base: libre_mercado_sur","textPreview":"Base: libre_mercado_sur","textChars":23,"textLines":1,"bbox":[954,310,180,24]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":3,"text":"- stock local\n- carrito local\n- compras locales\n- historial de movimientos","textPreview":"- stock local | - carrito local | - compras locales | - historial de movimientos","textChars":74,"textLines":4,"bbox":[954,350,180,132]}
+{"kind":"textbox","id":"sh/3ex0nuxc","slide":3,"text":"Despliegue LAN: otros equipos entran por navegador a http://IP_DEL_HOST:8080 mientras Docker mantiene separados web y nodos.","textPreview":"Despliegue LAN: otros equipos entran por navegador a http://IP_DEL_HOST:8080 mientras Docker mantiene separados web y nodos.","textChars":124,"textLines":1,"bbox":[96,530,1064,42]}
+{"kind":"notes","id":"nt/0qet0b","slide":3,"text":""}
+{"kind":"slide","id":"sl/hssah7","slide":4,"title":"LIBRE MERCADO","textShapes":8}
+{"kind":"shape","id":"sh/udg7adsj","slide":4,"bbox":[0,0,1280,88]}
+{"kind":"textbox","id":"sh/54zidony","slide":4,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,24,240,20]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":4,"text":"CRUD, reglas de negocio y seguridad","textPreview":"CRUD, reglas de negocio y seguridad","textChars":35,"textLines":1,"bbox":[72,46,1040,30]}
+{"kind":"shape","id":"sh/nap4r65w","slide":4,"bbox":[72,104,1136,1]}
+{"kind":"shape","id":"sh/upwb2hwf","slide":4,"bbox":[72,176,400,442]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":4,"text":"CRUD cubiertos","textPreview":"CRUD cubiertos","textChars":14,"textLines":1,"bbox":[94,196,356,24]}
+{"kind":"textbox","id":"sh/cvixczed","slide":4,"text":"- Productos\n- Usuarios\n- Clientes\n- Sucursales\n- Stock\n- Proveedores\n- Compras\n- Carritos\n- Ventas","textPreview":"- Productos | - Usuarios | - Clientes | - Sucursales | - Stock | - Proveedores | - Compras | - Carritos | - Ventas","textChars":98,"textLines":9,"bbox":[94,236,356,358]}
+{"kind":"shape","id":"sh/jm1cfa9w","slide":4,"bbox":[496,176,352,442]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":4,"text":"Reglas clave","textPreview":"Reglas clave","textChars":12,"textLines":1,"bbox":[518,196,308,24]}
+{"kind":"textbox","id":"sh/w3m94fu1","slide":4,"text":"- Productos y usuarios usan borrado logico.\n- Stock depende de producto + sucursal.\n- Compras incrementan inventario local.\n- Ventas descuentan inventario local.\n- Las tablas detalle dejan trazabilidad.\n- Preparacion / commit / abort se registran centralmente.","textPreview":"- Productos y usuarios usan borrado logico. | - Stock depende de producto + sucursal. | - Compras incrementan inventario local. | - Venta...","textChars":260,"textLines":6,"bbox":[518,236,308,358]}
+{"kind":"shape","id":"sh/loj2t83i","slide":4,"bbox":[872,176,336,442]}
+{"kind":"textbox","id":"sh/ex0nuxc3","slide":4,"text":"Seguridad","textPreview":"Seguridad","textChars":9,"textLines":1,"bbox":[894,196,292,24]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":4,"text":"- password_hash() y password_verify().\n- Sesiones por rol ADMIN / CLIENTE.\n- PDO con prepared statements.\n- Validaciones de formularios.\n- Separacion MVC simple.","textPreview":"- password_hash() y password_verify(). | - Sesiones por rol ADMIN / CLIENTE. | - PDO con prepared statements. | - Validaciones de formula...","textChars":161,"textLines":5,"bbox":[894,236,292,358]}
+{"kind":"notes","id":"nt/hssah7","slide":4,"text":""}
+{"kind":"slide","id":"sl/ycpcfz","slide":5,"title":"LIBRE MERCADO","textShapes":11}
+{"kind":"shape","id":"sh/1gvy90je","slide":5,"bbox":[0,0,1280,88]}
+{"kind":"textbox","id":"sh/qtcj6tov","slide":5,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,24,240,20]}
+{"kind":"textbox","id":"sh/je9cvixc","slide":5,"text":"Flujo del cliente con PHP + AJAX","textPreview":"Flujo del cliente con PHP + AJAX","textChars":32,"textLines":1,"bbox":[72,46,1040,30]}
+{"kind":"shape","id":"sh/87ed8bat","slide":5,"bbox":[72,104,1136,1]}
+{"kind":"shape","id":"sh/xs72x4na","slide":5,"bbox":[72,180,1136,412]}
+{"kind":"shape","id":"sh/q1orytsv","slide":5,"bbox":[102,212,170,42]}
+{"kind":"textbox","id":"sh/fmlkjm1c","slide":5,"text":"1. Login","textPreview":"1. Login","textChars":8,"textLines":1,"bbox":[116,222,142,20]}
+{"kind":"shape","id":"sh/8jqh0fep","slide":5,"bbox":[312,212,210,42]}
+{"kind":"textbox","id":"sh/x4nap4r6","slide":5,"text":"2. Carrito","textPreview":"2. Carrito","textChars":10,"textLines":1,"bbox":[326,222,182,20]}
+{"kind":"shape","id":"sh/1w7mp0bi","slide":5,"bbox":[560,212,230,42]}
+{"kind":"textbox","id":"sh/8bat47y1","slide":5,"text":"3. Checkout AJAX","textPreview":"3. Checkout AJAX","textChars":16,"textLines":1,"bbox":[574,222,202,20]}
+{"kind":"shape","id":"sh/jqh0fepk","slide":5,"bbox":[836,212,240,42]}
+{"kind":"textbox","id":"sh/q5o7qpg3","slide":5,"text":"4. Mis compras","textPreview":"4. Mis compras","textChars":14,"textLines":1,"bbox":[850,222,212,20]}
+{"kind":"textbox","id":"sh/18jqh0fe","slide":5,"text":"- Nodo central valida usuario y rol.\n- Se abre sesion segura.\n- El dashboard cambia segun ADMIN o CLIENTE.","textPreview":"- Nodo central valida usuario y rol. | - Se abre sesion segura. | - El dashboard cambia segun ADMIN o CLIENTE.","textChars":106,"textLines":3,"bbox":[118,320,138,130]}
+{"kind":"textbox","id":"sh/8nqxs72x","slide":5,"text":"- El cliente trabaja solo con sus carritos.\n- Selecciona sucursal de trabajo.\n- Define productos y cantidades.","textPreview":"- El cliente trabaja solo con sus carritos. | - Selecciona sucursal de trabajo. | - Define productos y cantidades.","textChars":110,"textLines":3,"bbox":[338,320,158,130]}
+{"kind":"textbox","id":"sh/j2t83itg","slide":5,"text":"- El formulario llama api/checkout.php.\n- La respuesta vuelve en JSON.\n- Si la sucursal esta OFFLINE, el checkout se bloquea.\n- Si esta ONLINE, confirma y redirige.","textPreview":"- El formulario llama api/checkout.php. | - La respuesta vuelve en JSON. | - Si la sucursal esta OFFLINE, el checkout se bloquea. | - Si ...","textChars":164,"textLines":4,"bbox":[586,320,182,156]}
+{"kind":"textbox","id":"sh/qh0fepkz","slide":5,"text":"- El cliente revisa ventas propias.\n- Puede mostrar fecha, sucursal, total y detalle.\n- Eso sirve como evidencia de trazabilidad funcional.","textPreview":"- El cliente revisa ventas propias. | - Puede mostrar fecha, sucursal, total y detalle. | - Eso sirve como evidencia de trazabilidad func...","textChars":139,"textLines":3,"bbox":[862,320,190,156]}
+{"kind":"textbox","id":"sh/1cfa9w3m","slide":5,"text":"AJAX no reemplaza la logica distribuida: solo mejora la experiencia y permite demostrar un flujo cliente-servidor moderno en la evaluacion.","textPreview":"AJAX no reemplaza la logica distribuida: solo mejora la experiencia y permite demostrar un flujo cliente-servidor moderno en la evaluacion.","textChars":139,"textLines":1,"bbox":[102,520,1000,32]}
+{"kind":"notes","id":"nt/ycpcfz","slide":5,"text":""}
+{"kind":"slide","id":"sl/h2e33z","slide":6,"title":"LIBRE MERCADO","textShapes":10}
+{"kind":"shape","id":"sh/r2p8nqxs","slide":6,"bbox":[0,0,1280,88]}
+{"kind":"textbox","id":"sh/kjm1cfa9","slide":6,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,24,240,20]}
+{"kind":"textbox","id":"sh/94fu18jq","slide":6,"text":"Stored procedures, ACID y Two-Phase Commit simplificado","textPreview":"Stored procedures, ACID y Two-Phase Commit simplificado","textChars":55,"textLines":1,"bbox":[72,46,1040,30]}
+{"kind":"shape","id":"sh/2p8nqxs7","slide":6,"bbox":[72,104,1136,1]}
+{"kind":"shape","id":"sh/ra5gbq1o","slide":6,"bbox":[72,176,330,442]}
+{"kind":"textbox","id":"sh/gvy90je9","slide":6,"text":"Procedimientos almacenados","textPreview":"Procedimientos almacenados","textChars":26,"textLines":1,"bbox":[94,196,286,24]}
+{"kind":"textbox","id":"sh/9gr2p8nq","slide":6,"text":"- sp_registrar_venta\n- sp_registrar_detalle_venta\n- sp_actualizar_total_venta\n- sp_realizar_compra\n- sp_actualizar_stock\n- sp_reconstruir_stock\n- sp_set_node_status","textPreview":"- sp_registrar_venta | - sp_registrar_detalle_venta | - sp_actualizar_total_venta | - sp_realizar_compra | - sp_actualizar_stock | - sp_r...","textChars":164,"textLines":7,"bbox":[94,236,286,358]}
+{"kind":"shape","id":"sh/2t83itgf","slide":6,"bbox":[426,176,390,442]}
+{"kind":"textbox","id":"sh/re1w7mp0","slide":6,"text":"Secuencia distribuida","textPreview":"Secuencia distribuida","textChars":21,"textLines":1,"bbox":[448,196,346,24]}
+{"kind":"textbox","id":"sh/bulwval8","slide":6,"text":"- 1. El backend registra PREPARED.\n- 2. Se abren transacciones en nodo central y nodo sucursal.\n- 3. El stored procedure de sucursal valida y descuenta stock.\n- 4. El central registra venta y detalle.\n- 5. Si todo sale bien: COMMITTED.\n- 6. Si algo falla: rollback y ABORTED.","textPreview":"- 1. El backend registra PREPARED. | - 2. Se abren transacciones en nodo central y nodo sucursal. | - 3. El stored procedure de sucursal ...","textChars":275,"textLines":6,"bbox":[448,236,346,358]}
+{"kind":"shape","id":"sh/i9s36hcr","slide":6,"bbox":[840,176,368,208]}
+{"kind":"textbox","id":"sh/p0bi9s36","slide":6,"text":"ACID en simple","textPreview":"ACID en simple","textChars":14,"textLines":1,"bbox":[862,196,324,24]}
+{"kind":"textbox","id":"sh/0fepkzup","slide":6,"text":"- Atomicidad: la venta completa o no existe.\n- Consistencia: no se vende sin stock valido.\n- Aislamiento: una operacion no deja estados parciales visibles.\n- Durabilidad: el commit persiste en InnoDB.","textPreview":"- Atomicidad: la venta completa o no existe. | - Consistencia: no se vende sin stock valido. | - Aislamiento: una operacion no deja estad...","textChars":200,"textLines":4,"bbox":[862,236,324,124]}
+{"kind":"shape","id":"sh/bi9s36hc","slide":6,"bbox":[840,410,368,208]}
+{"kind":"textbox","id":"sh/ixczed8v","slide":6,"text":"2PC simplificado","textPreview":"2PC simplificado","textChars":16,"textLines":1,"bbox":[862,430,324,24]}
+{"kind":"textbox","id":"sh/tovahoza","slide":6,"text":"- PREPARED en distributed_transactions.\n- COMMIT doble cuando ambos nodos responden.\n- ABORTED y reconstruccion si una etapa falla.","textPreview":"- PREPARED en distributed_transactions. | - COMMIT doble cuando ambos nodos responden. | - ABORTED y reconstruccion si una etapa falla.","textChars":131,"textLines":3,"bbox":[862,470,324,124]}
+{"kind":"notes","id":"nt/h2e33z","slide":6,"text":""}
+{"kind":"slide","id":"sl/t4yb4x","slide":7,"title":"LIBRE MERCADO","textShapes":11}
+{"kind":"shape","id":"sh/nyd0z610","slide":7,"bbox":[0,0,1280,88]}
+{"kind":"textbox","id":"sh/cj6tovah","slide":7,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,24,240,20]}
+{"kind":"textbox","id":"sh/54zidony","slide":7,"text":"Falla de nodos, rollback y recuperacion","textPreview":"Falla de nodos, rollback y recuperacion","textChars":39,"textLines":1,"bbox":[72,46,1040,30]}
+{"kind":"shape","id":"sh/upwb2hwf","slide":7,"bbox":[72,104,1136,1]}
+{"kind":"shape","id":"sh/nap4r65w","slide":7,"bbox":[72,178,310,442]}
+{"kind":"textbox","id":"sh/cvixczed","slide":7,"text":"Escenario","textPreview":"Escenario","textChars":9,"textLines":1,"bbox":[106,206,180,28]}
+{"kind":"textbox","id":"sh/5gbq1ory","slide":7,"text":"Desde nodos.php el admin puede marcar una sucursal OFFLINE. Eso simula particion o indisponibilidad local.","textPreview":"Desde nodos.php el admin puede marcar una sucursal OFFLINE. Eso simula particion o indisponibilidad local.","textChars":106,"textLines":1,"bbox":[106,252,240,112]}
+{"kind":"textbox","id":"sh/u18jqh0f","slide":7,"text":"Resultado esperado:\nsolo se bloquean compras hacia esa sucursal.","textPreview":"Resultado esperado: | solo se bloquean compras hacia esa sucursal.","textChars":64,"textLines":2,"bbox":[106,390,230,78]}
+{"kind":"shape","id":"sh/jm1cfa9w","slide":7,"bbox":[414,178,388,442]}
+{"kind":"textbox","id":"sh/b6xkf6dc","slide":7,"text":"Como demuestras rollback","textPreview":"Como demuestras rollback","textChars":24,"textLines":1,"bbox":[436,198,344,24]}
+{"kind":"textbox","id":"sh/il0rqd4v","slide":7,"text":"- Intentas comprar usando la sucursal marcada OFFLINE.\n- El backend detecta el estado del nodo antes de vender.\n- La venta queda cancelada.\n- No aparece commit confirmado.\n- El stock no se altera.\n- La transaccion queda ABORTED o no llega a confirmarse.","textPreview":"- Intentas comprar usando la sucursal marcada OFFLINE. | - El backend detecta el estado del nodo antes de vender. | - La venta queda canc...","textChars":253,"textLines":6,"bbox":[436,238,344,358]}
+{"kind":"shape","id":"sh/tcj6tova","slide":7,"bbox":[834,178,374,210]}
+{"kind":"textbox","id":"sh/0rqd4vmt","slide":7,"text":"Recuperacion","textPreview":"Recuperacion","textChars":12,"textLines":1,"bbox":[856,198,330,24]}
+{"kind":"textbox","id":"sh/byhgn29g","slide":7,"text":"- El admin vuelve a dejar la sucursal ONLINE.\n- Si hubo una operacion abortada tras descontar, sp_reconstruir_stock recompone el inventario.\n- Luego se puede reintentar la compra.","textPreview":"- El admin vuelve a dejar la sucursal ONLINE. | - Si hubo una operacion abortada tras descontar, sp_reconstruir_stock recompone el invent...","textChars":179,"textLines":3,"bbox":[856,238,330,126]}
+{"kind":"shape","id":"sh/idonyd0z","slide":7,"bbox":[834,412,374,208]}
+{"kind":"textbox","id":"sh/t47y1kre","slide":7,"text":"Mensaje para la defensa","textPreview":"Mensaje para la defensa","textChars":23,"textLines":1,"bbox":[856,432,330,24]}
+{"kind":"textbox","id":"sh/0je9cvix","slide":7,"text":"- La gracia no es que nunca falle.\n- La gracia es fallar de forma controlada, consistente y recuperable.","textPreview":"- La gracia no es que nunca falle. | - La gracia es fallar de forma controlada, consistente y recuperable.","textChars":104,"textLines":2,"bbox":[856,472,330,124]}
+{"kind":"notes","id":"nt/t4yb4x","slide":7,"text":""}
+{"kind":"slide","id":"sl/gugrlk","slide":8,"title":"LIBRE MERCADO","textShapes":11}
+{"kind":"shape","id":"sh/ahoza1gv","slide":8,"bbox":[0,0,1280,88]}
+{"kind":"textbox","id":"sh/l87ed8ba","slide":8,"text":"LIBRE MERCADO","textPreview":"LIBRE MERCADO","textChars":13,"textLines":1,"bbox":[72,24,240,20]}
+{"kind":"textbox","id":"sh/sneloj2t","slide":8,"text":"CAP, CP y despliegue en LAN","textPreview":"CAP, CP y despliegue en LAN","textChars":27,"textLines":1,"bbox":[72,46,1040,30]}
+{"kind":"shape","id":"sh/3ex0nuxc","slide":8,"bbox":[72,104,1136,1]}
+{"kind":"shape","id":"sh/at47y1kr","slide":8,"bbox":[72,178,260,442]}
+{"kind":"textbox","id":"sh/lkjm1cfa","slide":8,"text":"CP","textPreview":"CP","textChars":2,"textLines":1,"bbox":[110,234,120,80]}
+{"kind":"textbox","id":"sh/szqtcj6t","slide":8,"text":"Consistency + Partition Tolerance","textPreview":"Consistency + Partition Tolerance","textChars":33,"textLines":1,"bbox":[110,324,184,56]}
+{"kind":"textbox","id":"sh/3itgfmlk","slide":8,"text":"Preferimos bloquear una venta antes que dejar stock y ventas divergentes.","textPreview":"Preferimos bloquear una venta antes que dejar stock y ventas divergentes.","textChars":73,"textLines":1,"bbox":[110,410,184,114]}
+{"kind":"shape","id":"sh/ex0nuxc3","slide":8,"bbox":[364,178,392,200]}
+{"kind":"textbox","id":"sh/wfyxobm5","slide":8,"text":"Que priorizamos","textPreview":"Que priorizamos","textChars":15,"textLines":1,"bbox":[386,198,348,24]}
+{"kind":"textbox","id":"sh/l0rqd4vm","slide":8,"text":"- Consistencia entre venta central y stock local.\n- Tolerancia a particiones: una sucursal puede quedar aislada.\n- Aislamiento del problema: una sucursal caida no tumba a las otras.","textPreview":"- Consistencia entre venta central y stock local. | - Tolerancia a particiones: una sucursal puede quedar aislada. | - Aislamiento del pr...","textChars":181,"textLines":3,"bbox":[386,238,348,116]}
+{"kind":"shape","id":"sh/ed8bat47","slide":8,"bbox":[364,402,392,218]}
+{"kind":"textbox","id":"sh/7u54zido","slide":8,"text":"Que sacrificamos","textPreview":"Que sacrificamos","textChars":16,"textLines":1,"bbox":[386,422,348,24]}
+{"kind":"textbox","id":"sh/wra5gbq1","slide":8,"text":"- Disponibilidad de la sucursal afectada.\n- Si una sede esta OFFLINE, esa sede deja de vender temporalmente.\n- Es una decision intencional y justificable academicamente.","textPreview":"- Disponibilidad de la sucursal afectada. | - Si una sede esta OFFLINE, esa sede deja de vender temporalmente. | - Es una decision intenc...","textChars":169,"textLines":3,"bbox":[386,462,348,134]}
+{"kind":"shape","id":"sh/lc7u54zi","slide":8,"bbox":[788,178,420,442]}
+{"kind":"textbox","id":"sh/eloj2t83","slide":8,"text":"Como se publica en LAN","textPreview":"Como se publica en LAN","textChars":22,"textLines":1,"bbox":[810,198,376,24]}
+{"kind":"textbox","id":"sh/36hcrmhk","slide":8,"text":"- Docker Compose levanta web y bases por separado.\n- Solo se expone la web en el puerto 8080.\n- Otros equipos entran por http://IP_DEL_HOST:8080.\n- XAMPP queda como alternativa local, no como topologia principal.","textPreview":"- Docker Compose levanta web y bases por separado. | - Solo se expone la web en el puerto 8080. | - Otros equipos entran por http://IP_DE...","textChars":212,"textLines":4,"bbox":[810,238,376,358]}
+{"kind":"notes","id":"nt/gugrlk","slide":8,"text":""}
+{"kind":"slide","id":"sl/c4hu1n","slide":9,"title":"CIERRE","textShapes":10}
+{"kind":"shape","id":"sh/vu9knih4","slide":9,"bbox":[106,92,1068,536]}
+{"kind":"textbox","id":"sh/kf6dcbul","slide":9,"text":"CIERRE","textPreview":"CIERRE","textChars":6,"textLines":1,"bbox":[176,150,420,26]}
+{"kind":"textbox","id":"sh/d0z61032","slide":9,"text":"Libre Mercado queda listo para una defensa tecnica clara, visible y demostrable","textPreview":"Libre Mercado queda listo para una defensa tecnica clara, visible y demostrable","textChars":79,"textLines":1,"bbox":[176,190,760,64]}
+{"kind":"textbox","id":"sh/2lszqtcj","slide":9,"text":"- Arquitectura distribuida con nodo central + tres sucursales.\n- CRUD completos y reglas de negocio reales.\n- PHP + AJAX para el flujo cliente-servidor.\n- Stored procedures para compra, stock y recuperacion.\n- ACID y 2PC simplificado con evidencia en distributed_transactions.\n- CAP de tipo CP con bloqueo por sucursal afectada.\n- Despliegue accesible por LAN para que otros prueben la pagina.","textPreview":"- Arquitectura distribuida con nodo central + tres sucursales. | - CRUD completos y reglas de negocio reales. | - PHP + AJAX para el fluj...","textChars":393,"textLines":7,"bbox":[176,300,720,220]}
+{"kind":"shape","id":"sh/v6psfil0","slide":9,"bbox":[930,182,160,94]}
+{"kind":"textbox","id":"sh/knih4byh","slide":9,"text":"LAN","textPreview":"LAN","textChars":3,"textLines":1,"bbox":[946,196,128,42]}
+{"kind":"textbox","id":"sh/d8bat47y","slide":9,"text":"Acceso web","textPreview":"Acceso web","textChars":10,"textLines":1,"bbox":[946,240,128,36]}
+{"kind":"shape","id":"sh/6psfil0r","slide":9,"bbox":[930,300,160,94]}
+{"kind":"textbox","id":"sh/val87ed8","slide":9,"text":"ACID","textPreview":"ACID","textChars":4,"textLines":1,"bbox":[946,314,128,42]}
+{"kind":"textbox","id":"sh/judg7ads","slide":9,"text":"Rollback total","textPreview":"Rollback total","textChars":14,"textLines":1,"bbox":[946,358,128,36]}
+{"kind":"shape","id":"sh/u9knih4b","slide":9,"bbox":[930,418,160,94]}
+{"kind":"textbox","id":"sh/1032lszq","slide":9,"text":"CP","textPreview":"CP","textChars":2,"textLines":1,"bbox":[946,432,128,42]}
+{"kind":"textbox","id":"sh/cfa9w3m9","slide":9,"text":"Consistencia primero","textPreview":"Consistencia primero","textChars":20,"textLines":1,"bbox":[946,476,128,36]}
+{"kind":"textbox","id":"sh/jm1cfa9w","slide":9,"text":"Frase final sugerida: el sistema no solo funciona cuando todo esta sano; tambien responde correctamente cuando una sucursal falla.","textPreview":"Frase final sugerida: el sistema no solo funciona cuando todo esta sano; tambien responde correctamente cuando una sucursal falla.","textChars":130,"textLines":1,"bbox":[176,572,760,22]}
+{"kind":"notes","id":"nt/c4hu1n","slide":9,"text":""}

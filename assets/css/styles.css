@@ -1,0 +1,19 @@
+body {
+    min-height: 100vh;
+}
+
+.card-shadow {
+    box-shadow: 0 0.5rem 1.25rem rgba(15, 23, 42, 0.08);
+}
+
+.page-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.table-responsive {
+    border-radius: 0.75rem;
+}

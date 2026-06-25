@@ -1,0 +1,8 @@
+/docker/mysql_data/
+/.cache/
+/.env
+/.idea/
+/.vscode/
+/Thumbs.db
+/Desktop.ini
+*.log
