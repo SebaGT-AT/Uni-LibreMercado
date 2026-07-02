@@ -1,12 +1,9 @@
 import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 import { Presentation, PresentationFile } from "@oai/artifact-tool";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const projectRoot = path.resolve(__dirname, "..");
+const projectRoot = process.cwd();
 const outputPptx = path.join(projectRoot, "outputs", "LibreMercado-Presentacion-Evaluacion3.pptx");
 const workspace = path.join(os.tmpdir(), "codex-presentations", "libremercado-evaluacion3");
 const tmpDir = path.join(workspace, "tmp");

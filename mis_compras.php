@@ -34,79 +34,81 @@ $currentModule = 'mis_compras';
 require __DIR__ . '/includes/header.php';
 ?>
 <?php require __DIR__ . '/includes/flash.php'; ?>
-<div class="page-title">
-    <h1 class="h3 mb-0">Mis Compras</h1>
-    <a href="dashboard.php" class="btn btn-outline-secondary">Volver</a>
-</div>
+
+<section class="client-page-header">
+    <div>
+        <h1>Mis compras</h1>
+        <p>Revisa tus compras confirmadas y abre el detalle cuando lo necesites.</p>
+    </div>
+    <div class="client-page-actions">
+        <a href="carritos.php" class="btn btn-primary">Seguir comprando</a>
+    </div>
+</section>
 
 <?php if ($selectedVenta): ?>
-    <div class="card card-shadow border-0 mb-4">
-        <div class="card-body">
-            <div class="d-flex justify-content-between align-items-start">
-                <div>
-                    <h2 class="h5 mb-1">Detalle de compra #<?= e($selectedVenta['id_venta']) ?></h2>
-                    <p class="text-muted mb-0">Fecha: <?= e($selectedVenta['fecha']) ?></p>
-                </div>
-                <a href="mis_compras.php" class="btn btn-outline-secondary btn-sm">Cerrar detalle</a>
+    <section class="client-panel mb-4">
+        <div class="d-flex justify-content-between align-items-start flex-wrap gap-3">
+            <div>
+                <h2 class="h4 mb-1">Compra #<?= e($selectedVenta['id_venta']) ?></h2>
+                <p class="text-muted mb-0">Fecha: <?= e($selectedVenta['fecha']) ?></p>
             </div>
-            <div class="table-responsive mt-3">
-                <table class="table table-striped align-middle mb-0">
-                    <thead>
-                        <tr>
-                            <th>Producto ID</th>
-                            <th>Cantidad</th>
-                            <th>Precio unitario</th>
-                            <th>Subtotal</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <?php foreach ($selectedVenta['detalle'] as $item): ?>
-                        <tr>
-                            <td><?= e($item['id_producto']) ?></td>
-                            <td><?= e($item['cantidad']) ?></td>
-                            <td>$<?= number_format((float) $item['precio'], 0, ',', '.') ?></td>
-                            <td>$<?= number_format((float) $item['precio'] * (int) $item['cantidad'], 0, ',', '.') ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
+            <strong class="h5 mb-0">$<?= number_format((float) $selectedVenta['total'], 0, ',', '.') ?></strong>
+            <a href="mis_compras.php" class="btn btn-outline-secondary btn-sm">Cerrar detalle</a>
         </div>
-    </div>
+        <div class="table-responsive mt-3">
+            <table class="table client-table align-middle mb-0">
+                <thead>
+                    <tr>
+                        <th>Producto ID</th>
+                        <th>Cantidad</th>
+                        <th>Precio unitario</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach ($selectedVenta['detalle'] as $item): ?>
+                    <tr>
+                        <td><?= e($item['id_producto']) ?></td>
+                        <td><?= e($item['cantidad']) ?></td>
+                        <td>$<?= number_format((float) $item['precio'], 0, ',', '.') ?></td>
+                        <td>$<?= number_format((float) $item['precio'] * (int) $item['cantidad'], 0, ',', '.') ?></td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </section>
 <?php endif; ?>
 
-<div class="card card-shadow border-0">
-    <div class="card-body">
-        <?php if (!$ventas): ?>
-            <p class="text-muted mb-0">Todavia no registras compras confirmadas.</p>
-        <?php else: ?>
-            <div class="table-responsive">
-                <table class="table table-striped align-middle mb-0">
-                    <thead>
-                        <tr>
-                            <th>ID Venta</th>
-                            <th>Sucursal</th>
-                            <th>Fecha</th>
-                            <th>Total</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+<section class="client-panel">
+    <?php if (!$ventas): ?>
+        <div class="text-muted">Todavia no registras compras confirmadas.</div>
+    <?php else: ?>
+        <div class="table-responsive">
+            <table class="table client-table align-middle mb-0">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Sucursal</th>
+                        <th>Fecha</th>
+                        <th>Total</th>
+                        <th class="text-end"></th>
+                    </tr>
+                </thead>
+                <tbody>
                     <?php foreach ($ventas as $venta): ?>
                         <tr>
                             <td><?= e($venta['id_venta']) ?></td>
                             <td><?= e($venta['sucursal']) ?></td>
                             <td><?= e($venta['fecha']) ?></td>
                             <td>$<?= number_format((float) $venta['total'], 0, ',', '.') ?></td>
-                            <td>
-                                <a href="mis_compras.php?ver=<?= $venta['id_venta'] ?>" class="btn btn-sm btn-primary">Ver detalle</a>
-                            </td>
+                            <td class="text-end"><a href="mis_compras.php?ver=<?= $venta['id_venta'] ?>" class="btn btn-sm btn-outline-primary">Ver detalle</a></td>
                         </tr>
                     <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
-        <?php endif; ?>
-    </div>
-</div>
+                </tbody>
+            </table>
+        </div>
+    <?php endif; ?>
+</section>
+
 <?php require __DIR__ . '/includes/footer.php'; ?>

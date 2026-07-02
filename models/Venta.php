@@ -245,7 +245,13 @@ class Venta
 
     private function assertBranchAvailable(int $sucursalId): void
     {
-        if (!$this->nodoModel->isOnline($sucursalId)) {
+        if (!$this->nodoModel->isAvailableForOperations($sucursalId)) {
+            $node = $this->nodoModel->statusSnapshot($sucursalId);
+
+            if ($node && (int) ($node['logical_online'] ?? 0) === 1 && (int) ($node['reachable'] ?? 0) === 0) {
+                throw new RuntimeException('La sucursal seleccionada figura ONLINE, pero no tiene conectividad real. La venta se bloquea para preservar consistencia CP.');
+            }
+
             throw new RuntimeException('La sucursal seleccionada esta OFFLINE. Bajo CP la venta se bloquea para evitar inconsistencias.');
         }
     }

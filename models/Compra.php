@@ -55,7 +55,12 @@ class Compra
             return null;
         }
 
-        $pdo = dbSucursalByKey($nodeKey);
+        $pdo = tryDbSucursalByKey($nodeKey);
+
+        if (!$pdo instanceof PDO) {
+            return null;
+        }
+
         $stmt = $pdo->prepare('SELECT * FROM compras WHERE id_compra = :id');
         $stmt->execute(['id' => $localId]);
         $compra = $stmt->fetch();
@@ -85,7 +90,7 @@ class Compra
     {
         $compra = $this->find($id);
         if (!$compra) {
-            throw new RuntimeException('Compra no encontrada.');
+            throw new RuntimeException('Compra no encontrada o nodo no disponible.');
         }
 
         $pdo = dbSucursalById((int) $compra['id_sucursal']);
@@ -119,7 +124,7 @@ class Compra
             if ($id !== null) {
                 $previous = $this->find($id);
                 if (!$previous) {
-                    throw new RuntimeException('Compra no encontrada.');
+                    throw new RuntimeException('Compra no encontrada o nodo no disponible.');
                 }
 
                 foreach ($previous['detalle'] as $item) {

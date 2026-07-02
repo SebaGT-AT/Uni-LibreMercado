@@ -46,6 +46,11 @@ class Nodo
         return $node ? (int) $node['online'] === 1 : false;
     }
 
+    public function isAvailableForOperations(int $sucursalId): bool
+    {
+        return $this->isOnline($sucursalId) && $this->actualConnectivity($sucursalId);
+    }
+
     public function setStatus(int $sucursalId, bool $online, string $message = ''): void
     {
         $stmt = $this->dbCentral->prepare('CALL sp_set_node_status(:id_sucursal, :online, :mensaje)');
@@ -59,12 +64,46 @@ class Nodo
 
     public function actualConnectivity(int $sucursalId): bool
     {
+        $pdo = tryDbSucursalById($sucursalId);
+
+        if (!$pdo instanceof PDO) {
+            return false;
+        }
+
         try {
-            $pdo = dbSucursalById($sucursalId);
             $stmt = $pdo->query('SELECT 1');
             return (bool) $stmt->fetchColumn();
         } catch (Throwable) {
             return false;
         }
+    }
+
+    public function statusSnapshot(int $sucursalId): ?array
+    {
+        $node = $this->find($sucursalId);
+
+        if (!$node) {
+            return null;
+        }
+
+        $reachable = $this->actualConnectivity($sucursalId);
+        $logicalOnline = (int) $node['online'] === 1;
+
+        $node['logical_online'] = $logicalOnline ? 1 : 0;
+        $node['reachable'] = $reachable ? 1 : 0;
+        $node['available'] = ($logicalOnline && $reachable) ? 1 : 0;
+
+        if ($logicalOnline && !$reachable) {
+            $node['effective_status'] = 'DEGRADED';
+            $node['effective_message'] = 'Estado logico ONLINE, pero el contenedor o la conexion real no responde.';
+        } elseif (!$logicalOnline) {
+            $node['effective_status'] = 'OFFLINE';
+            $node['effective_message'] = $node['status_message'] ?: 'Nodo marcado manualmente como OFFLINE.';
+        } else {
+            $node['effective_status'] = 'ONLINE';
+            $node['effective_message'] = $node['status_message'] ?: 'Nodo disponible para operar.';
+        }
+
+        return $node;
     }
 }

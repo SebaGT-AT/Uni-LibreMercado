@@ -67,11 +67,39 @@ docker compose up -d --build
 ```text
 http://localhost:8080/
 ```
+Si otro equipo de la misma red quiere entrar a la aplicacion, usa:
+```text
+http://IP_DEL_HOST:8080/index.php
+```
 3. Puertos de base de datos:
 - Central: `3407`
 - Norte: `3408`
 - Centro: `3409`
 - Sur: `3410`
+
+## Acceso desde otros equipos
+La web ya queda publicada por Docker en el puerto `8080` gracias a `docker-compose.yml`. En Windows normalmente solo falta permitir ese puerto en el firewall.
+
+1. Levantar los contenedores:
+```bash
+docker compose up -d --build
+```
+2. Abrir PowerShell como administrador y ejecutar:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\tools\habilitar_firewall_libre_mercado.ps1
+```
+3. Revisar tu IP local con:
+```powershell
+ipconfig
+```
+4. Compartir esta URL con otras personas de tu misma red:
+```text
+http://IP_DEL_HOST:8080/index.php
+```
+
+Notas:
+- La regla del script se crea para el perfil `Private`. Si tu red de Windows esta marcada como `Public`, el acceso puede seguir bloqueado.
+- Si usas XAMPP en vez de Docker, normalmente debes abrir el puerto `80` o el puerto configurado en Apache.
 
 ## Ejecucion con XAMPP
 XAMPP queda como modo de desarrollo local en una sola instancia MySQL. El proyecto mantiene la misma logica distribuida, pero las cuatro bases viven dentro del mismo servidor MySQL.
@@ -90,9 +118,8 @@ Puedes usar:
 - MySQL Workbench
 
 ## Usuarios de prueba
-- `admin` / `password`
-- `cliente1` / `password`
-- `cliente2` / `password`
+- Los usuarios semilla se cargan desde los scripts SQL de inicializacion.
+- Ajusta o reemplaza esas credenciales en tu entorno local antes de exponer la aplicacion fuera de desarrollo.
 
 ## CAP
 Se eligio CP:

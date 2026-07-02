@@ -52,7 +52,13 @@ class Stock
             return null;
         }
 
-        $stmt = dbSucursalByKey($nodeKey)->prepare('SELECT * FROM stock WHERE id_stock = :id');
+        $pdo = tryDbSucursalByKey($nodeKey);
+
+        if (!$pdo instanceof PDO) {
+            return null;
+        }
+
+        $stmt = $pdo->prepare('SELECT * FROM stock WHERE id_stock = :id');
         $stmt->execute(['id' => $localId]);
         $row = $stmt->fetch();
 
@@ -80,8 +86,15 @@ class Stock
 
     public function availabilityBySucursal(int $sucursalId): array
     {
+        $pdo = tryDbSucursalById($sucursalId);
+
+        if (!$pdo instanceof PDO) {
+            $config = sucursalConfigById($sucursalId);
+            throw new RuntimeException('La sucursal ' . $config['name'] . ' no esta disponible en este momento.');
+        }
+
         $productos = $this->indexedProductos();
-        $stmt = dbSucursalById($sucursalId)->prepare(
+        $stmt = $pdo->prepare(
             'SELECT id_producto, id_sucursal, cantidad
              FROM stock
              WHERE id_sucursal = :sucursal

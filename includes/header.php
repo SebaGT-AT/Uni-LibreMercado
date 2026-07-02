@@ -16,39 +16,49 @@ $currentModule = $currentModule ?? '';
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/styles.css" rel="stylesheet">
 </head>
-<body class="bg-light">
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+<body class="<?= isClientRole() ? 'client-shell' : 'bg-light' ?>">
+<nav class="navbar navbar-expand-lg <?= isClientRole() ? 'navbar-light client-nav' : 'navbar-dark bg-primary shadow-sm' ?>">
     <div class="container">
-        <a class="navbar-brand fw-bold" href="dashboard.php">Libre Mercado</a>
+        <a class="navbar-brand fw-semibold" href="dashboard.php">Libre Mercado</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="mainNavbar">
             <?php if ($user): ?>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link <?= $currentModule === 'dashboard' ? 'active' : '' ?>" href="dashboard.php">Dashboard</a></li>
-                    <li class="nav-item"><a class="nav-link <?= $currentModule === 'carritos' ? 'active' : '' ?>" href="carritos.php">Carritos</a></li>
-                    <?php if (isClientRole()): ?>
+                <?php if (isClientRole()): ?>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 client-nav-links">
+                        <li class="nav-item"><a class="nav-link <?= $currentModule === 'dashboard' ? 'active' : '' ?>" href="dashboard.php">Productos</a></li>
+                        <li class="nav-item"><a class="nav-link <?= $currentModule === 'carritos' ? 'active' : '' ?>" href="carritos.php">Carrito</a></li>
+                        <li class="nav-item"><a class="nav-link <?= $currentModule === 'mis_compras' ? 'active' : '' ?>" href="mis_compras.php">Compras</a></li>
+                    </ul>
+                    <div class="client-userbar">
+                        <span class="text-muted small"><?= e($user['username']) ?></span>
+                        <a class="btn btn-outline-secondary btn-sm" href="logout.php">Salir</a>
+                    </div>
+                <?php else: ?>
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link <?= $currentModule === 'dashboard' ? 'active' : '' ?>" href="dashboard.php">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link <?= $currentModule === 'carritos' ? 'active' : '' ?>" href="carritos.php">Carritos</a></li>
                         <li class="nav-item"><a class="nav-link <?= $currentModule === 'mis_compras' ? 'active' : '' ?>" href="mis_compras.php">Mis Compras</a></li>
-                    <?php endif; ?>
-                    <?php if (isAdmin()): ?>
-                        <li class="nav-item"><a class="nav-link <?= $currentModule === 'nodos' ? 'active' : '' ?>" href="nodos.php">Nodos</a></li>
-                        <li class="nav-item"><a class="nav-link <?= $currentModule === 'productos' ? 'active' : '' ?>" href="productos.php">Productos</a></li>
-                        <li class="nav-item"><a class="nav-link <?= $currentModule === 'clientes' ? 'active' : '' ?>" href="clientes.php">Clientes</a></li>
-                        <li class="nav-item"><a class="nav-link <?= $currentModule === 'usuarios' ? 'active' : '' ?>" href="usuarios.php">Usuarios</a></li>
-                        <li class="nav-item"><a class="nav-link <?= $currentModule === 'sucursales' ? 'active' : '' ?>" href="sucursales.php">Sucursales</a></li>
-                        <li class="nav-item"><a class="nav-link <?= $currentModule === 'stock' ? 'active' : '' ?>" href="stock.php">Stock</a></li>
-                        <li class="nav-item"><a class="nav-link <?= $currentModule === 'proveedores' ? 'active' : '' ?>" href="proveedores.php">Proveedores</a></li>
-                        <li class="nav-item"><a class="nav-link <?= $currentModule === 'compras' ? 'active' : '' ?>" href="compras.php">Compras</a></li>
-                        <li class="nav-item"><a class="nav-link <?= $currentModule === 'ventas' ? 'active' : '' ?>" href="ventas.php">Ventas</a></li>
-                    <?php endif; ?>
-                </ul>
-                <div class="d-flex align-items-center gap-3 text-white">
-                    <span><?= e($user['username']) ?> (<?= e($user['rol']) ?>)</span>
-                    <a class="btn btn-outline-light btn-sm" href="logout.php">Salir</a>
-                </div>
+                        <?php if (isAdmin()): ?>
+                            <li class="nav-item"><a class="nav-link <?= $currentModule === 'nodos' ? 'active' : '' ?>" href="nodos.php">Nodos</a></li>
+                            <li class="nav-item"><a class="nav-link <?= $currentModule === 'productos' ? 'active' : '' ?>" href="productos.php">Productos</a></li>
+                            <li class="nav-item"><a class="nav-link <?= $currentModule === 'clientes' ? 'active' : '' ?>" href="clientes.php">Clientes</a></li>
+                            <li class="nav-item"><a class="nav-link <?= $currentModule === 'usuarios' ? 'active' : '' ?>" href="usuarios.php">Usuarios</a></li>
+                            <li class="nav-item"><a class="nav-link <?= $currentModule === 'sucursales' ? 'active' : '' ?>" href="sucursales.php">Sucursales</a></li>
+                            <li class="nav-item"><a class="nav-link <?= $currentModule === 'stock' ? 'active' : '' ?>" href="stock.php">Stock</a></li>
+                            <li class="nav-item"><a class="nav-link <?= $currentModule === 'proveedores' ? 'active' : '' ?>" href="proveedores.php">Proveedores</a></li>
+                            <li class="nav-item"><a class="nav-link <?= $currentModule === 'compras' ? 'active' : '' ?>" href="compras.php">Compras</a></li>
+                            <li class="nav-item"><a class="nav-link <?= $currentModule === 'ventas' ? 'active' : '' ?>" href="ventas.php">Ventas</a></li>
+                        <?php endif; ?>
+                    </ul>
+                    <div class="d-flex align-items-center gap-3 text-white">
+                        <span><?= e($user['username']) ?> (<?= e($user['rol']) ?>)</span>
+                        <a class="btn btn-outline-light btn-sm" href="logout.php">Salir</a>
+                    </div>
+                <?php endif; ?>
             <?php endif; ?>
         </div>
     </div>
 </nav>
-<main class="container py-4">
+<main class="container py-4 <?= isClientRole() ? 'client-main' : '' ?>">

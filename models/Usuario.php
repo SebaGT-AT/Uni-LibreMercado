@@ -65,6 +65,49 @@ class Usuario
         ]);
     }
 
+    public function registerClient(array $data): array
+    {
+        $this->db->beginTransaction();
+
+        try {
+            $userStmt = $this->db->prepare(
+                'INSERT INTO usuarios (username, password, rol, activo) VALUES (:username, :password, :rol, 1)'
+            );
+            $userStmt->execute([
+                'username' => trim($data['username']),
+                'password' => password_hash($data['password'], PASSWORD_DEFAULT),
+                'rol' => 'CLIENTE',
+            ]);
+
+            $userId = (int) $this->db->lastInsertId();
+
+            $clientStmt = $this->db->prepare(
+                'INSERT INTO clientes (nombre, telefono, id_usuario) VALUES (:nombre, :telefono, :id_usuario)'
+            );
+            $clientStmt->execute([
+                'nombre' => trim($data['nombre']),
+                'telefono' => trim($data['telefono']),
+                'id_usuario' => $userId,
+            ]);
+
+            $this->db->commit();
+
+            $user = $this->find($userId);
+
+            if (!$user) {
+                throw new RuntimeException('No fue posible recuperar el usuario registrado.');
+            }
+
+            return $user;
+        } catch (Throwable $e) {
+            if ($this->db->inTransaction()) {
+                $this->db->rollBack();
+            }
+
+            throw $e;
+        }
+    }
+
     public function update(int $id, array $data): void
     {
         $fields = 'username = :username, rol = :rol';

@@ -32,7 +32,12 @@ class Carrito
             return null;
         }
 
-        $pdo = dbSucursalByKey($nodeKey);
+        $pdo = tryDbSucursalByKey($nodeKey);
+
+        if (!$pdo instanceof PDO) {
+            return null;
+        }
+
         $stmt = $pdo->prepare('SELECT * FROM carrito WHERE id_carrito = :id');
         $stmt->execute(['id' => $localId]);
         $row = $stmt->fetch();
@@ -76,7 +81,8 @@ class Carrito
             return;
         }
 
-        $stmt = dbSucursalByKey($nodeKey)->prepare('DELETE FROM carrito WHERE id_carrito = :id');
+        $pdo = dbSucursalByKey($nodeKey);
+        $stmt = $pdo->prepare('DELETE FROM carrito WHERE id_carrito = :id');
         $stmt->execute(['id' => $localId]);
     }
 

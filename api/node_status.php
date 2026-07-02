@@ -28,11 +28,15 @@ if ($sucursalId <= 0 || ($online !== 0 && $online !== 1)) {
 try {
     $model = new Nodo();
     $model->setStatus($sucursalId, $online === 1, $message);
-    $node = $model->find($sucursalId);
+    $node = $model->statusSnapshot($sucursalId);
 
     jsonResponse([
         'ok' => true,
-        'message' => $online === 1 ? 'Nodo recuperado correctamente.' : 'Nodo marcado como OFFLINE.',
+        'message' => $online === 1
+            ? ((int) ($node['reachable'] ?? 0) === 1
+                ? 'Nodo recuperado correctamente.'
+                : 'Nodo marcado como ONLINE, pero aun no responde fisicamente.')
+            : 'Nodo marcado como OFFLINE.',
         'node' => $node,
     ]);
 } catch (Throwable $e) {

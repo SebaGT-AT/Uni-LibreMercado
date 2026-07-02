@@ -41,6 +41,7 @@ require __DIR__ . '/includes/header.php';
             <tbody>
                 <?php foreach ($nodes as $node): ?>
                     <?php $online = (int) $node['online'] === 1; ?>
+                    <?php $reachable = $model->actualConnectivity((int) $node['id_sucursal']); ?>
                     <tr data-node-row="<?= (int) $node['id_sucursal'] ?>">
                         <td><?= e($node['nombre']) ?></td>
                         <td>
@@ -49,13 +50,17 @@ require __DIR__ . '/includes/header.php';
                             </span>
                         </td>
                         <td>
-                            <?php $reachable = $model->actualConnectivity((int) $node['id_sucursal']); ?>
-                            <span class="badge <?= $reachable ? 'text-bg-primary' : 'text-bg-secondary' ?>">
+                            <span class="badge <?= $reachable ? 'text-bg-primary' : 'text-bg-secondary' ?>" data-node-connectivity>
                                 <?= $reachable ? 'RESPONDE' : 'SIN RESPUESTA' ?>
                             </span>
                         </td>
                         <td data-node-date><?= e((string) ($node['updated_at'] ?? '')) ?></td>
-                        <td data-node-message><?= e((string) ($node['status_message'] ?? '')) ?></td>
+                        <td data-node-message>
+                            <?= e($online && !$reachable
+                                ? 'Estado logico ONLINE, pero el contenedor o la conexion real no responde.'
+                                : (string) ($node['status_message'] ?? '')
+                            ) ?>
+                        </td>
                         <td>
                             <button
                                 type="button"
@@ -114,13 +119,19 @@ document.addEventListener('click', async function (event) {
 
         const online = String(data.node.online) === '1';
         const status = row.querySelector('[data-node-status]');
+        const connectivity = row.querySelector('[data-node-connectivity]');
         const date = row.querySelector('[data-node-date]');
         const message = row.querySelector('[data-node-message]');
+        const reachable = String(data.node.reachable) === '1';
 
         status.textContent = online ? 'ONLINE' : 'OFFLINE';
         status.className = `badge ${online ? 'text-bg-success' : 'text-bg-danger'}`;
+        if (connectivity) {
+            connectivity.textContent = reachable ? 'RESPONDE' : 'SIN RESPUESTA';
+            connectivity.className = `badge ${reachable ? 'text-bg-primary' : 'text-bg-secondary'}`;
+        }
         date.textContent = data.node.updated_at ?? '';
-        message.textContent = data.node.status_message ?? '';
+        message.textContent = data.node.effective_message ?? data.node.status_message ?? '';
 
         trigger.textContent = online ? 'Simular falla' : 'Recuperar nodo';
         trigger.className = `btn btn-sm ${online ? 'btn-outline-danger' : 'btn-outline-success'}`;

@@ -23,7 +23,10 @@ El proyecto incluye:
 1. Ejecutar `docker compose up -d --build`
 2. Esperar a que MySQL inicialice las bases.
 3. Abrir:
-   - `http://localhost:8080/`
+   - `http://localhost:8080/index.php`
+4. Si otro equipo de la misma red necesita entrar:
+   - habilitar el puerto `8080` en Windows Firewall con `tools/habilitar_firewall_libre_mercado.ps1`
+   - compartir `http://IP_DEL_HOST:8080/index.php`
 
 ### Justificacion academica
 Docker permite demostrar portabilidad, reproduccion del entorno y despliegue controlado del sistema distribuido.

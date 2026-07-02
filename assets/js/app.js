@@ -20,3 +20,23 @@ document.addEventListener('click', function (event) {
         remove.closest('.dynamic-row')?.remove();
     }
 });
+
+document.addEventListener('input', function (event) {
+    const search = event.target.closest('[data-catalog-search]');
+
+    if (!search) {
+        return;
+    }
+
+    const target = document.querySelector(search.dataset.catalogTarget || '');
+    const term = search.value.trim().toLowerCase();
+
+    if (!target) {
+        return;
+    }
+
+    target.querySelectorAll('[data-product-row]').forEach(function (row) {
+        const source = (row.dataset.searchable || '').toLowerCase();
+        row.classList.toggle('d-none', term !== '' && !source.includes(term));
+    });
+});

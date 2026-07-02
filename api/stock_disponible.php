@@ -39,5 +39,5 @@ try {
     jsonResponse([
         'ok' => false,
         'message' => $e->getMessage(),
-    ], 500);
+    ], 503);
 }

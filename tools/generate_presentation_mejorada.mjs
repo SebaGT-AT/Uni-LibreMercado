@@ -1,27 +1,10 @@
 import fs from "node:fs/promises";
 import os from "node:os";
 import path from "node:path";
-import { fileURLToPath, pathToFileURL } from "node:url";
+import { Presentation, PresentationFile } from "@oai/artifact-tool";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const projectRoot = path.resolve(__dirname, "..");
-const artifactPath = path.join(
-  os.homedir(),
-  ".cache",
-  "codex-runtimes",
-  "codex-primary-runtime",
-  "dependencies",
-  "node",
-  "node_modules",
-  "@oai",
-  "artifact-tool",
-  "dist",
-  "artifact_tool.mjs"
-);
-const { Presentation, PresentationFile } = await import(pathToFileURL(artifactPath).href);
-
-const OUTPUT_PPTX = path.join(projectRoot, "outputs", "LibreMercado-Presentacion-Mejorada.pptx");
+const PROJECT_ROOT = process.cwd();
+const OUTPUT_PPTX = path.join(PROJECT_ROOT, "outputs", "LibreMercado-Presentacion-Mejorada.pptx");
 const TMP_ROOT = path.join(os.tmpdir(), "codex-presentations", "libre-mercado-mejorada");
 const PREVIEW_DIR = path.join(TMP_ROOT, "preview");
 

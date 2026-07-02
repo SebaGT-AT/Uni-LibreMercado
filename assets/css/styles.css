@@ -1,5 +1,11 @@
 body {
     min-height: 100vh;
+    font-family: "Segoe UI", "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.client-shell {
+    background: #f6f7f8;
+    color: #1f2933;
 }
 
 .card-shadow {
@@ -16,4 +22,181 @@ body {
 
 .table-responsive {
     border-radius: 0.75rem;
+}
+
+.client-nav {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.client-nav .navbar-brand,
+.client-nav .nav-link {
+    color: #111827;
+}
+
+.client-nav .nav-link.active,
+.client-nav .nav-link:hover {
+    color: #111827;
+}
+
+.client-nav-links {
+    gap: 0.5rem;
+}
+
+.client-userbar {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.client-main {
+    padding-top: 1.75rem;
+    padding-bottom: 3rem;
+}
+
+.client-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.client-page-header h1 {
+    margin-bottom: 0.35rem;
+    font-size: 1.9rem;
+    font-weight: 600;
+}
+
+.client-page-header p {
+    margin-bottom: 0;
+    color: #6b7280;
+}
+
+.client-page-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.client-toolbar {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr) auto;
+    gap: 1rem;
+    align-items: end;
+}
+
+.client-toolbar-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.client-toolbar-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.client-panel {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.9rem;
+    padding: 1rem;
+}
+
+.client-shop-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(320px, 0.85fr);
+    gap: 1rem;
+}
+
+.client-table th {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: #4b5563;
+    border-bottom-width: 1px;
+}
+
+.client-table td {
+    padding-top: 0.9rem;
+    padding-bottom: 0.9rem;
+    vertical-align: middle;
+}
+
+.client-qty-cell {
+    width: 110px;
+}
+
+.client-cart-header {
+    margin-bottom: 1rem;
+}
+
+.client-cart-items {
+    display: grid;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.client-cart-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    background: #f9fafb;
+}
+
+.client-cart-row-main {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.client-cart-product {
+    flex: 1;
+    min-width: 0;
+    font-weight: 500;
+}
+
+.client-cart-qty {
+    width: 88px;
+}
+
+.client-cart-actions {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+}
+
+.client-table-actions {
+    display: inline-flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 991.98px) {
+    .client-toolbar,
+    .client-shop-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .page-title,
+    .client-page-header,
+    .client-page-actions,
+    .client-cart-row,
+    .client-cart-row-main {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .client-toolbar-meta {
+        gap: 0.5rem;
+    }
 }
